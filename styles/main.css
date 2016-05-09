@@ -277,6 +277,102 @@ a.button-more {
     text-decoration: none;
 }
 
+/*for forms*/
+
+
+#form-contact {
+    width: 95%;
+    margin: 0 auto;
+}
+
+#form-contact ol {
+    list-style-type: none;
+}
+
+#form-contact li {
+    padding-bottom: 10px;
+}
+
+#form-contact .radioBtnSet li, #form-contact .checkSet li{
+    display: inline-block;
+    margin-right: 8px;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset#genInfo label {
+    width: 30%;
+}
+
+legend {
+    color: #243a6c;
+    font-weight: bold;
+    font-size: 1.25em;
+    text-align: center;
+    padding: 20px 10px 5px;
+    border-bottom: solid 3px;
+    width: 100%;
+    text-shadow: 1px 1px 1px #999;
+    margin-bottom: 1em;
+}
+
+input, textarea {
+    background-color: #dceef8;
+    padding: 5px;
+    margin: 0;
+    border: solid 1px #999;
+}
+
+input [type=radio] {
+    width: auto;
+}
+
+input#form-sponsorAmt {
+    width: 2.5em;
+}
+
+textarea {
+    width: 75%;
+    min-height: 6em;
+}
+
+label {
+    text-align: right;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.checkSet label {
+    width: auto;
+}
+
+.radioBtnSet label, dropchoice label, checkSet label {
+    width: auto;
+    text-align: left;
+}
+.comment {
+    margin: -8px 0 1em;
+    font-style: italic;
+    color: #999;
+}
+
+button[type=submit] {
+    display: block;
+    padding: 5px 15px;
+    color: white;
+    background-color: #243a6c;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px #999;
+    margin: 0 auto;
+    margin-top: 10px; 
+}
+/*end forms*/
+
+
 /* for larger screens */
 @media screen and (min-width:670px) { /* MEDIA QUERIES */
     body {

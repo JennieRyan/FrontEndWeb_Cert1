@@ -47,11 +47,12 @@
                     <li>
 <!--                       "for=" attribute links the name with the element (and is important for screen readers)-->
                         <label for="name">Name:</label>
-                        <input type="text" name="name" id="name" title="Name" placeholder="Enter your full name" required autofocus />
+                        <input type="text" name="name" id="name" title="Name" placeholder="Enter your full name" required autofocus pattern="[a-z]" />
                     </li>
                     <li>
                         <label for="phone">Phone:</label>
                         <input type="tel" name="phone" id="phone" title="Phone" placeholder="888-532-4658" required />
+                        <!--   to add in a pattern for phone could use (not recommended) pattern="\d{3}[\-]\d{3}[\-]\d{4}-->
                     </li>
                     <li>
                         <label for="email">Email:</label>
@@ -59,7 +60,7 @@
                     </li>
                     <li>
                         <label for="url">Web Address:</label>
-                        <input type="url" name="url" id="url" title="Web Address" placeholder="Website Address" />
+                        <input type="url" name="url" id="url" title="Web Address" placeholder="http://www.yourwebsite.com" />
                     </li>
                 </ol>            
             </fieldset>
@@ -109,12 +110,12 @@
             
             <fieldset id="newletter-comments">
                 <legend>Sign up for the newsletter</legend>
-                <ol>
+                <ol class="checkSet">
                    <li>
                        <input type="checkbox" name="newsletter" id="enewsletter" value="e-newsletter" />
-                       <label for="enewsletter">E-Newsletter</label>
+                       <label for="enewsletter">e-newsletter</label>
                        <input type="checkbox" name="newsletter" id="pnewsletter" value="print-newsletter" />
-                       <label for="pnewsletter">Printed Newsletter</label>
+                       <label for="pnewsletter">printed newsletter</label>
                    </li> 
                 </ol>
                 
