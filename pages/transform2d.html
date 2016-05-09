@@ -1,0 +1,77 @@
+<!doctype html>
+
+
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8" />
+    <title>CSS button animation</title>
+    
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+    
+    <style rel=stylesheet>
+        img:active {
+            cursor: pointer;
+        }
+        img.translate:active {
+            transform: translate(100px, 100px) /*x is first, then y */
+        }
+        img.translateY:active {
+            transform: translateY(-50px);
+        }
+        img.rotate:active {
+            transform: rotate(200deg)
+        }
+        img.size:active {
+            transform: scale(.5, .5); /*x is first, then y */
+        }
+        img.skew:active {
+            transform: skew(45deg, 20deg);
+        }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            background-color: #fcb722;
+            display: inline-block;
+            transform: skew(200deg);
+            animation: shimmy 2s infinite;
+            animation-direction: alternate;
+        }
+        
+        @keyframes shimmy {
+            0% {
+                transform: skewY(20deg);
+            }
+            100% {
+                transform: skewY(-20deg);
+            }
+        }
+    </style>
+
+</head>
+    
+<body>
+    <header>  
+    <section>
+        <img src="../images/spots.png" alt="spotted circle" class="translate" />
+        <img src="../images/spots.png" alt="spotted circle" class="translateY" />
+        <img src="../images/spots.png" alt="spotted circle" class="rotate" />
+        <img src="../images/spots.png" alt="spotted circle" class="size" />
+        <img src="../images/spots.png" alt="spotted circle" class="skew" />
+
+        <div class="box"></div>
+        <div class="box"></div>
+
+    </section>    
+    </header>
+    
+    
+    <footer>
+        
+    </footer>
+</body>
+</html>
