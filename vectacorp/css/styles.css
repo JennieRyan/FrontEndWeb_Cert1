@@ -1,0 +1,38 @@
+hr {
+    margin-bottom: 10px;
+}
+
+#menu {
+    list-style-type: none;
+    float: right;
+    margin: 50px 0 0 0;
+}
+
+#menu li {
+    float: left;
+    padding: 0 10px;
+}
+
+#menu li a {
+    color: #CC1C0D;
+    text-decoration: none;
+    font-weight: 600;    
+}
+
+@media (max-width:750px) {
+    #nav select /*cuz that's the type of tag the drop down menu is*/ {
+        width: 80%;
+        margin-top: 20px;
+        float: right;
+    }
+}
+
+@media (max-width:550px) {
+    nav.three.columns {
+        text-align: center;
+    }
+        
+    #nav select {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
