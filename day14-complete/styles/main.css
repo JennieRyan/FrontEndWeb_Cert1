@@ -33,6 +33,11 @@ h4 {
 p {
     margin-bottom:12px;
 }
+pre {
+    font-family: Arial, sans-serif;
+    font-size:16px;
+    margin:-12px 0 12px;
+}
 a{
     color:#016a99;
 }
@@ -89,45 +94,40 @@ ul {
     border-color:#ccc;
     cursor: default;
 }
-/*drop down menu styles*/
 
+/* drop down menu */
 #mainMenu ul {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    margin: 0;
+    position:absolute;
+    top:100%;
+    left:0;
+    margin:0;
     text-align: left;
-    border-right: solid 2px #ccc;
-    border-left: solid 2px #ccc;
+    border:solid 2px #ccc;
+    border-top:none;
+    border-bottom:none;
     display: none;
 }
-
-#mainMenu li:hover ul {
-    display: block;
+ul#mainMenu li:hover ul {
+    display:block;
 }
-
-#mainMenu ul li{
+#mainMenu ul li {
     display: block;
-    margin: 0;
-    background-color: #016a99;
-    border-bottom: solid 2px #ccc;
+    margin:0;
+    background-color:#016a99;
+    border-bottom:solid 2px #ccc;
 }
-
 #mainMenu ul a:link {
-    padding: 5px 5px 5px 20px;
-    border:  solid 2px #016a99;
+    padding:5px 5px 5px 20px;
+    border:solid 2px #016a99;
 }
-
 #mainMenu ul a:visited {
-    border: solid 2px #016a99;
+    border:solid 2px #016a99;
 }
-
 #mainMenu ul a:hover {
-    border: solid 2px #00285c;
+    border:solid 2px #00285c;
 }
-
+ 
 /* mainMenu ends */
-
 
 #mainSection {
     margin:10px;
@@ -177,137 +177,78 @@ ul {
     text-align: center;
     margin-bottom:12px;
 }
-
-/*internal 2 column pages*/
-
-.colA {
-    width: 25%;
-    float: left;
-    border: dashed 2px #016a99;
-    padding: 5px 10px 0 10px;
-    margin: 0 20px 10px 0;
-}
-
-.colB {
-    padding: 5px 0 10px 10px;
-}
-
-.spaceRT {
-    margin-right: 20px;
-}
-
-/* internal 3 colum pages */
-
+/* internal 3 column pages */
 #colA3up {
-    width: 240px;
-    float: left;
-    margin-right: 15px;
+    width:240px;
+    float:left;
+    margin-right:15px;
 }
-
 #colB3up {
-    width: 490px;
-    margin-right: 15px;
-    float: left;
+    width:490px;
+    margin-right:15px;
+    float:left;
 }
-
 #colC3up {
-    float: left;
-    width: 180px;
+    float:left;
+    width:180px;
 }
-
-/*internal 2 column big on left small on right */
-
-#colA2 {
-    width: 73%;
-    float: left;
-    padding-right: 2%;
-    border-right: dashed 2px #016a99;
-}
-
-#colB2 {
-    float: left;
-    width: 18%;
-    padding-left: 2%
-}
-/*contactus -- alternate column layout */
+/* alternate column layouts */
 #colA2up {
-    width: 738px;
-    border-right: solid 2px #666;
-    padding-right: 10px;
-    margin-right: 10px;
-    float: left;
+    width:738px;
+    border-right:solid 2px #666;
+    padding-right:10px;
+    margin-right:10px;
+    float:left;
 }
-
-/*image sprite */
-
 .socialMedia {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    margin:0;
+    padding:0;
+    list-style-type: none;
 }
-
-.socialMedia li{
+.socialMedia li {
     display: inline-block;
-    margin: 0 10px 10px 10px;
+    margin:0 10px 20px;
 }
-
 .socialMedia a {
-    width: 50px;
-    height: 49px;
-    display: inline-block;
+    width:50px;
+    height:49px;
+    display:inline-block;
     background-image: url(../images/socialMediaSprite.gif);
     background-repeat: no-repeat;
-}
-
-a.fb {
-    background-position: 0 0;
 }
 a:hover.fb {
     background-position: 0 -50px;
 }
-
 a.twitter {
     background-position: -50px 0;
 }
-
 a:hover.twitter {
     background-position: -50px -50px;
 }
-
 a.youtube {
     background-position: -100px 0;
 }
-
 a:hover.youtube {
     background-position: -100px -50px;
 }
-
-a.instagram {
+a.ig {
     background-position: -150px 0;
 }
-
-a:hover.instagram {
+a:hover.ig {
     background-position: -150px -50px;
 }
-
 a.linkedin {
     background-position: -200px 0;
 }
-
 a:hover.linkedin {
     background-position: -200px -50px;
 }
-
 a.fish {
     background-position: -250px 0;
 }
-
 a:hover.fish {
     background-position: -250px -50px;
 }
-
-/*footer*/
-
 #footer {
     background-color:#016a99;
     color:#fff;
