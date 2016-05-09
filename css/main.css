@@ -1,0 +1,291 @@
+*{
+	padding:0;
+	margin:0;	
+	}
+body {
+	font-family: Verdana, sans-serif;
+	background:url(../images/background.jpg) repeat-x;		
+}
+h1 {
+	color:#00285c;
+	border-bottom:dotted 3px #00285c;
+	padding-bottom:3px;
+	margin-bottom:12px;
+	text-align: center;
+	}
+h3 {
+	background-color:#016a99;
+	color:#fff;
+	padding:2px 8px;
+	margin-bottom:10px;
+}
+p {
+	margin-bottom:20px;	
+}
+a {
+	color:#016a99;
+}
+a:visited {
+	color:#666;
+}
+a:hover {
+	color:orange;
+	text-decoration: none;	
+}
+#container {
+	width:960px;
+	margin:0 auto;
+}
+#mainContent, #header {
+	position: relative;
+}
+#firstCol {
+	margin-left:90px;
+}
+.colRight {
+	float:right;
+	margin-left:20px;	
+}
+.colLeft{
+	float:left;
+	margin-right:20px;	
+}
+.clearIt {
+	clear: both;		
+}
+.swimTurtle {
+	position: absolute;
+	right:-150px;
+	top:10px;
+}
+.tLogo {
+	position: absolute;
+	top:-25px;
+	left:-15px;
+}
+.saveTab {
+	position: fixed;
+	right:0;
+	top:25%;
+}
+	
+	/* navigation */
+#navigation, #navigation ul {
+	list-style-type: none;
+}
+#navigation li {
+	width:150px;
+	float:left;
+	margin:6px 15px 20px 0;
+	background-color:#016a99;
+	border:solid 1px #00285c;
+	text-align: center;
+}
+#navigation li:hover {
+	background-color:#333;				
+}
+#navigation a{
+	color:white;
+	padding:6px;
+	text-decoration: none;
+	display: block;
+	font-weight: bold;
+}
+#navigation a.currentPage {
+	background-color:#666;
+	cursor:default;
+}
+#navigation li li{
+	margin:0
+}
+
+
+/* **** new drop down menu styles *** */
+#navigation ul {
+	display: none;
+}
+
+#navigation li:hover > ul {
+	display: block;
+}
+
+#navigation li {
+	position: relative;
+}
+#navigation:after {
+		content: ""; 
+		clear: both; 
+		display: block; /* he clearfix style rule will clear the floats used on the subsequent list items without the use of overflow:hidden, which would hide the sub menus and prevent them from appearing. */
+	}
+/* new sub nav rules */
+#navigation ul {
+	position: absolute; 
+	top: 100%;
+	left:-1px; /* have to use thisbecause of the border, otherwise teh drop down will not completely lineup with teh parent. */
+	z-index:20; /* this bring teh dropdown in front of other elements. */
+}
+/* third tier fly-out, these menus inherit all of teh other styles, all we need to do is chnage the absolute positioning properties so they align absolutiely to the right (left:100%) of the relative postion of teh parent li. */
+#navigation ul ul {
+	position: absolute; 
+	top: 0%;
+	left:100%;
+}
+
+/* end navigation */
+	
+	/* multi column rules */
+.multiCol {
+	float:left;
+	width:260px;
+	text-align: center;	
+	}
+.multiCol h3 {
+	background-color:	#016a99;
+	color:#fff;
+	width:236px;
+	padding:2px;
+	margin:0 0 6px 10px;
+	}
+	
+/* gallery styles */
+.galleryPic ul {
+	text-align: center;
+}
+.galleryPic li {
+	list-style-type: none;
+	font-size: 12px;
+	font-style: italic;
+	color:#666;
+	text-align: center;
+	width:230px;
+	display: inline-block;
+	margin-bottom:20px;
+}
+.galleryPic img {
+	width:200px;
+	padding:5px;
+	border:solid 1px #666;
+	margin:5px 5px 0;
+	display: block;
+}
+/* contact */
+.contact {
+	background:url(../images/contactTurtle.jpg) no-repeat;	
+	width:920px;
+	height:194px;
+	padding:20px;
+	overflow: auto;
+	}
+.contact h4 {
+		color:#056CAF;
+		font-weight:normal;
+		margin-bottom:20px;
+		font-size:20px;
+}
+.contact p {
+	width:520px;
+}
+	.contact strong {
+		color:#00285C;
+}
+	
+/* footer rules */
+#footer {
+	color:white;
+	background-color:#00285c;
+	text-align: center;
+	font-size: 12px;
+	margin-top:20px;
+	position: relative;
+}
+
+/* interior styles */
+.iCol1 {
+	width: 240px;
+}
+.iCol2 {
+	float: left;
+	width: 700px;
+}
+.iCol1 p {
+	font-size: 10px;
+	color: #666;
+	text-align: center;
+	font-style: italic;
+}
+video {
+	border:solid 4px #fff;
+}
+/* special styles */
+body#picBG {
+	background: url(../images/fullScreen.jpg) fixed no-repeat top center;
+}
+#picBG #container {
+	background: url(../images/dimmer.png) repeat;
+	padding:0 20px 20px;
+}
+/* form styles */
+fieldset {
+    padding:1em;
+    margin:1em 0;
+    border: solid 1px #fff;
+}
+legend {
+  padding:0 5px;
+    font-style: italic;
+    color:#016a99;
+}
+label {
+    width:175px;
+    text-align: right;
+    color:#064f73;
+    vertical-align: top;
+    display: inline-block;
+}
+label.newsletter {
+    width:250px;
+}
+input {
+    margin-right:5px;
+}
+ul.radioList {
+    list-style-type: none;
+    display: inline-block;
+}
+.radioList li {
+    display: inline;
+    margin-right:10px;
+}
+textarea {
+    width: 50%;
+    height:60px;
+}
+p.orChoice {
+   margin-bottom:4px; 
+}
+p.orChoice em {
+    margin:10px 0 10px 100px;
+    font-size: .9em;
+    color:#666;
+}
+#submit {
+    margin-left:250px;
+    padding:4px 8px;
+    background-color:#069;
+    color:#fff;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    border-color:transparent;
+    cursor:pointer;
+}
+        
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Save the turtles | Help now</title>
+<link href="../css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="container">
+<header id="header"> <a href="../index.html"><img src="../images/seaTurtles.jpg" alt="Sea Turtles" /></a>
+<nav>
+	<ul id="navigation">
+    	<li><a href="#">About STT</a>
+        	<ul>
+            	<li><a href="#">Our Organization</a></li>
+                <li><a href="#">Members</a></li>	
+                <li><a href="#">Volunteer</a>
+                	<ul>
+                        <li><a href="#">California</a></li>
+                        <li><a href="#">Florida</a></li>	
+                        <li><a href="#">Costa Rica</a></li>	
+                    </ul>
+                </li>
+            </ul>
+        </li>	
+    	<li><a href="all_turtles.html">The Turtles</a>
+        	<ul>
+            	<li><a href="turtle1.html">Turtle 1</a></li>	
+                <li><a href="turtle2.html">Turtle 2</a></li>
+                <li><a href="../../../15-assignment-complete/root/pages/turtle3.html">Turtle 3</a></li>
+            </ul>
+        </li>
+		<li><a href="turtleGallery.html">Turtle Gallery</a></li>		
+    <li><a href="contact.html">Contact Us</a></li>		
+	</ul>
+ </nav>
+</header>
+
+<section id="interiorContent" class="clearIt">
+	<h1>Save a turtle today!</h1>
+	<h3>You can help, sponsor a turtle and make a difference</h3>
+	
+<!--form-->
+
+<form action="formdataview.html" method="get" id="saveForm" enctype="text/plain">
+    <fieldset>
+        <legend>Sponsor Details</legend>
+        <label for="first_name"> * First Name</label>
+        <input type="text" id="first_name" name="first_name" value="" placeholder="Your first name" required /> <br />
+        
+        <label for="last_name"> * Last Name</label>
+        <input type="text" id="last_name" name="last_name" value="" placeholder="Your last name" required /><p></p>
+        
+        <label for="email"> * Email Address</label>
+        <input type="email" id="email" name="email" value="" placeholder="your@email.com" />
+    </fieldset>
+    
+    <fieldset>
+        <legend>Specifics</legend>
+        <label for="location">Location:</label>
+        <select id="location" name="location">
+            <option value="California">California</option>
+            <option value="Hawaii">Hawaii</option>
+            <option value="Costa_Rica">Costa Rica</option>
+        </select>
+        <p></p>
+        
+<!--        radio buttons-->
+        <label for="turtleType">Pick a turtle type:</label>
+        <ul class="radioList">
+            <li><input type="radio" name="turtleType" value="green" id="green">Green Turtle</li>
+            <li><input type="radio" name="turtleType" value="logger" id="logger">Loggerhead Turtle</li>
+            <li><input type="radio" name="turtleType" value="ridley" id="ridley">Ridley Turtle</li>
+            <li><input type="radio" name="turtleType" value="leatherback" id="leatherback">Leatherback Turtle</li>
+            <li><input type="radio" name="turtleType" value="hawk" id="hawk">Hawksbill Turtle</li>
+        </ul>
+        <p></p>
+<!--        checkboxes-->
+        <label for="noPreference">I have no preference</label>
+        <ul class="checkbox">
+            <li><input type="checkbox" name="turtleType" id="green">Green Turtle</li>
+            <li><input type="checkbox" name="turtleType" id="logger">Loggerhead Turtle</li>
+            <li><input type="checkbox" name="turtleType" id="ridley">Ridley Turtle</li>
+            <li><input type="checkbox" name="turtleType" id="leatherback">Leatherback Turtle</li>
+            <li><input type="checkbox" name="turtleType" id="hawk">Hawksbill Turtle</li>
+        </ul>
+        <p></p>
+<!--        textarea -->
+   <label for="message">Questions/Comments</label>
+   <textarea name="message" id="message" placeholder="Write your message here please"></textarea>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Stay in Touch:</legend>
+        <label for="newsletter" class="newsletter">Sign up for our e-newsletter</label>
+        <ul class="radioList">
+            <li><input type="radio" id="newsletter" name="newsletter" value="yes>" />Yes</li>
+            <li><input type="radio" id="newsletter" name="newsletter" value="no>" />No</li>
+        </ul>
+        <p></p>
+        
+        <input type="submit" id="submit" value="I'm saving a turtle today!" />
+    </fieldset>
+</form>
+
+<!--form done-->
+	
+ 
+</section><!--close interiorContent -->
+
+<div class="clearIt"></div>
+<footer id="footer">
+<p>&copy;2014 - save the turtle!</p>
+</footer>
+
+
+</div><!--close container-->
+</body>
+
+</html>
