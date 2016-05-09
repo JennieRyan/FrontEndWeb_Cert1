@@ -75,6 +75,7 @@ body {
     font-family:'cabinregular',sans-serif;
     background-color:#2fa1e0;
     background-image: linear-gradient(#2fa1e0, white);
+    position: relative;
 }
 header {
     background-color:#243a6c;
@@ -100,7 +101,6 @@ h2 {
 h3 {
     padding-top: 1em;
 }
-
 a {
     color:#196a96;
 }
@@ -137,10 +137,20 @@ main article:first-child {
 }
 #article-tertiary {
     margin-bottom:0;
-    padding-bottom:4em;
+    padding-bottom:8em;
 }
 
 /* main navigation */
+#menuIcon {
+    text-align: right;
+    padding: 0 15px 10px;
+}
+#mainMenu {
+    position: absolute;
+    bottom: 40px;
+    background-color: #2fa1e0;
+    width: 100%;
+}
 #mainMenu a{
     color:white;
     text-decoration: none;
@@ -151,21 +161,9 @@ main article:first-child {
 #mainMenu a:hover {
     background-color:#0a193b;
 }
-
-#mainMenu li {
-    width: 50%;
-    float: left;
-    list-style-type: none;
+#mainMenu li:nth-child(1){
+    border-top:solid 1px white;
 }
-
-#mainMenu li:nth-of-type(odd) a {
-    border-right: solid 1px #fff;
-}
-
-#mainMenu ul {
-    border-top: solid 1px #fff;
-}
-
 /* end main navigation */
 /* footer rules */
 footer {
@@ -173,17 +171,13 @@ footer {
     background-image:linear-gradient(#243a6c, #2fa1e0);
     position: relative;
     text-align: center;
+    height: 40px;
 }
-footer figure img {
-    position: absolute;
-    top:-2.5em;
-    left:0;
+
+footer figure {
+    display: none;
 }
-footer figcaption {
-    position: absolute;
-    top:-1.1em;
-    left:9.5em;
-}
+
 #copyright {
     padding: 1.5em 0 .5em 0;
     color:white;
@@ -242,16 +236,6 @@ a.button-more { /* sometimes the arrow on the button-more drops to the next line
 .top a {
     text-decoration: none;
 }
-/*for extra small screens*/
-@media screen and (max-width:275px) {
-    #mainMenu {
-        font-size: .75em;
-    }
-    #mainMenu a {
-       padding: 10px .6em; 
-    }
-}
-
 
 /* for larger screens */
 @media screen and (min-width:670px) { /* MEDIA QUERIES */
@@ -288,8 +272,20 @@ a.button-more { /* sometimes the arrow on the button-more drops to the next line
         border-right:solid 1px #ccc; /* add seperator lines between the columns */
         border-left:solid 1px #ccc;
     }
-    .top {
-        display: none;
+    
+    footer figure {
+        display: block;
+    }
+    
+    footer figure img {
+        position: absolute;
+        top:-2.5em;
+        left:0;
+    }
+    footer figcaption {
+        position: absolute;
+        top:-1.1em;
+        left:9.5em;
     }
     
 }
