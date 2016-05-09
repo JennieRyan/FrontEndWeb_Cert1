@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+        <title>Column Options Float</title>
+        <style type="text/css">
+        
+            .container{
+                width: 675px;
+                border: solid 1px #666;
+                margin: 0 auto 30px;
+            }
+            
+            h1 {
+                font-family: Verdana, sans-serif;
+                font-size: 25px;
+                margin-top: 0;
+                padding: 5px;
+                background: url(../images/BG.jpg) repeat-x center bottom #48aad1;
+                /* background-image: url(../images/BG.jpg);
+                background-repeat: repeat-x;
+                background-position: center bottom;
+                background-color: #48aad1;*/
+                
+            }
+            
+            .box {
+                width: 200px;
+                border: solid 1px #7bc1fc;
+            }
+            
+            /*this targets .box classes that are children of set1*/
+            .set1 .box {
+                float: left;
+                margin-right: 15px;
+            }
+            
+            .set2 .box {
+                display: inline-block;
+                margin-right: 15px;
+            }
+            
+            .color {
+                background-color: yellow;
+            }
+            
+            .clearIt {
+                clear: both;
+            }
+  
+            
+            /*container 2 styles*/
+            .col1 {
+                background-color: #ccc;
+                width: 17%;
+                float: left;
+                margin-right: 3%;
+            }
+            
+            .col2 {
+                background-color: #333;
+                width: 47%;
+                float: left;
+                margin-right: 3%;
+            }
+            
+            
+            .col3 {
+                background-color: #666;
+                width: 30%;
+                float: right;
+            }
+            
+            .bottom {
+                background-color: #000;
+                color: #fff;
+            }
+            
+            /* container 3 style -- when you float right add margin on left.  When you float left add margin on right.*/
+            .onLeft {
+                float: left;
+                margin-right: 15px;
+            }
+            
+            .onRight {
+                float: right;
+                margin-left: 15px;
+            }
+            
+            
+/* css comment */
+        </style>
+    
+    </head>
+
+    <body>
+<!-- visible page content goes here -->
+        <div class="container set1">
+            <div class="box">
+                <h1>Box Title 1</h1>
+                <p>some box content....</p>
+            </div>
+            <div class="box">
+                <h1>Box Title 2</h1>
+                <p>some box content....</p>
+            </div>
+            <div class="box">
+                <h1>Box Title 3</h1>
+                <p>some box content....</p>
+            </div>
+            <p class="color clearIt">A good time to bike is in the morning</p>
+        </div> <!--close container 1-->
+        
+        <div class="container set2">
+            <div class="box">
+                <h1>Box Title 1</h1>
+                <p>some box content....</p>
+            </div>
+            <div class="box">
+                <h1>Box Title 2</h1>
+                <p>some box content....</p>
+            </div>
+            <div class="box">
+                <h1>Box Title 3</h1>
+                <p>some box content....</p>
+            </div>
+            <p class="color clearIt">A good time to bike is in the morning</p>
+        </div> <!--close container 1-->
+        
+        
+        <div class="container">
+            <div class="col1">
+                <h1>Box Title 1</h1>
+                <p>some box content....</p>
+            </div>
+            <div class="col2">
+                <h1>Box Title 2</h1>
+                <p>some box content....</p>
+            </div>
+            <div class="col3">
+                <h1>Box Title 3</h1>
+                <p>some box content....</p>
+            </div>
+            <div class="clearIt"></div>
+            <p class="bottom">hey, I'm the last thing in here</p>
+        </div> <!--close container 2-->
+ 
+        <div class="container">
+            <div class="box">
+                <h1>Box Title 1</h1>
+                <p>some box content....</p>
+            </div>
+            <div class="box">
+                <h1>Box Title 2</h1>
+                <p>some box content....</p>
+            </div>
+            <div class="box">
+                <h1>Box Title 3</h1>
+                <p>some box content....</p>
+            </div>
+            <div class="clearIt"></div>
+        </div> <!--close container 3-->
+               
+        <div class="container">
+            <p><img class="onLeft" src="../images/circle.jpg" alt="circle" />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit mi at urna tincidunt scelerisque. Proin tempor tortor et dolor ullamcorper, at fermentum eros ornare. Cras feugiat volutpat justo, at porttitor eros mattis sed.</p>
+            <div class="clearIt"></div>
+
+            <p><img class="onRight" src="../images/circle2.jpg" alt="circle" />Aenean feugiat, nunc semper malesuada ultricies, eros dolor mattis lacus, at finibus nunc nisl in ante. Maecenas mollis tristique tempus. Sed egestas elit ut lobortis congue. Curabitur quis convallis lorem. Aliquam sit amet tempus enim. Ut placerat sem nec odio pretium, quis congue eros mollis. Pellentesque lobortis aliquam egestas. Aenean eros felis, ultrices eu est vitae, auctor tincidunt lorem. Mauris vel maximus enim. Nam varius vehicula neque. In hac habitasse platea dictumst. Aliquam id lacinia orci, vel rutrum nibh. Nunc tristique velit eu nisi viverra aliquet. Maecenas tincidunt a tellus vel luctus. Nam elementum odio eget magna efficitur sagittis.</p>
+            <div class="clearIt"></div>
+        </div>
+        
+        <div class="container option2">
+            <div class="box">
+                <h1>Box Title 1</h1>
+                <p>some box content....</p>
+            </div>
+            <div class="box">
+                <h1>Box Title 2</h1>
+                <p>some box content....</p>
+            </div>
+            <div class="box">
+                <h1>Box Title 3</h1>
+                <p>some box content....</p>
+            </div>
+            <p class="color clearIt">A good time to bike is in the morning</p>
+        </div> <!--close container 1-->
+        
+    </body>
+    
+    
+</html>
