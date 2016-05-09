@@ -74,7 +74,7 @@ header, nav, section, aside, article, footer, video, audio, main {      display:
 body {
     font-family:'cabinregular',sans-serif;
     background-color:#2fa1e0;
-    background-image: linear-gradient(#2fa1e0, white);
+    background: linear-gradient(#2fa1e0, white) fixed;
 }
 header {
     background-color:#243a6c;
@@ -96,9 +96,6 @@ h2 {
     border-bottom:dotted 2px #243a6c;
     margin:0 0 .4em;
     padding:.4em 0 0;
-}
-h3 {
-    padding-top: 1em;
 }
 a {
     color:#196a96;
@@ -201,7 +198,7 @@ a.button-large {
     border-radius: .25em;
     box-shadow:3px 3px 6px #333;
     display: inline-block;
-    margin:.6em 0;
+    margin:.2em 0 .6em;
 }
 a:hover.button-large {
     background-color:#107571;
@@ -213,84 +210,79 @@ a.button-more:after {
     content:" \2192";
 }
 
-/*
-**************** new rules for Friday **********************
-*/
+/* further rules to enhance the page after designing the initial mobile first site rules */
+/* small screen rules added */
 
-/* a few small screen rules we didn't have time to add. */
-h3 { 
+h3 {
     padding-top: 1em;
 }
-a.button-more { /* sometimes the arrow on the button-more drops to the next line to prevent this from happening add the following to our existing rule, now the link words and our arrow will stay together no matter what. */
+
+a.button-more {
     white-space: nowrap;
 }
+
 .center {
-        text-align: center;
-    }
+text-align: center;
+}
+
 .top {
     position: absolute;
-    top:-1.1em;
-    right:15px;
+    top: -1.1em;
+    right: 15px;
     font-style: bold;
     font-size: .9em;
 }
+
 .top a {
     text-decoration: none;
 }
 
-/* for larger screens */
-@media screen and (min-width:670px) { /* MEDIA QUERIES */
-    body {
-        max-width: 1000px; /* set a maximum width for the page */
-        margin: 0 auto; /* horizontally center it as  a block */
+/*larger screen rules added */
+@media screen and (min-width:670px) { /*opens media query*/
+    body {max-width: 1000px; /*sets max width for the page*/
+    margin: 0 auto; /*horizontally center this as a block */
     }
     h2 {
-        font-size: 1.75em; /* adjust h2 size */
+        font-size: 1.75em; /*relative h2 sizing larger*/
     }
     #mainMenu {
-        text-align: center; 
+        text-align: center;
     }
-    #mainMenu li { /* make menu items appear on one line and center them on page */
-        display:inline-block;
-        border:none;
-        width:24%;
-        text-align:center;
+    
+    #mainMenu li {
+        display: inline-block;
+        border: none;
+        width: 24%;
+        text-align: center;
     }
-    #mainMenu li a, #mainMenu li:nth-child(1) { /* remove menu borders - from small screen rules*/
-        border:none;
+    /* resetting small screen rules*/
+    #mainMenu li a, #mainMenu li:nth-child(1) {
+        border: none;
     }
-
-    article {margin:0;} /* zero out all margin settings from small screen rules */
-    #article-primary, #article-secondary, #article-tertiary { /* style all articles to appear side-by-sideand to */
-        float:right;
-        width:33.2%; /* fill available space, have to be less than 33.3% to accomdate for border on middle article (next rule), show this first with teh following rule and then change to next rule to make some space on right and left */
-        width:29.2%; /* subtract 2% from each column and add that 2% onto the right and left padding (next rule) to create spacing between columns. */
-        padding: 0 2% 1em; /* the 2% is to create the spacing between the columns and the 1em bottom is to make it so it doesn't crash into footer */
+    
+    article {
+        margin: 0;
+    }
+    /* large screen rules so articles side by side instead */
+    #article-primary, #article-secondary, #article-tertiary {
+        float: right;
+        width: 33.2%; /* fill available space, have to be less than 33.3% to accomofdate for border on middle article (next rule) */
+        width: 29.2%; /* subtract 2% from each column and add that 2% onto the right and left padding (next rule) to create spacing between columns*/
+        padding: 0 2% 1em; /*the 2% is to create spacing between the columns and the 1em is to make it so it doesn't crash into the footer*/
     }
     
     #article-secondary {
-        background-color:white; /* make middle column have white background */
-        border-right:solid 1px #ccc; /* add seperator lines between the columns */
-        border-left:solid 1px #ccc;
+        background-color: #fff;
+        border-right: solid 1px #ccc;
+        border-left: solid 1px #ccc;
     }
+    
     .top {
         display: none;
     }
     
-}
 
-/* Other things you guys can do on this file: 
-
-    1. make 'button-large' center align within their respective articles, add more margin to the top, they are still too tight to the other content
-    2. Create a mid screen view - have class work out together how layout should change with mid screen view, create an additional media query where the layout breaks. 
-    3. there are other small tweaks you guys can work on to improve the layout, have them adjust the file where necessary
-
-*/
-
-
-
-
-
+ } /*ends media query*/
 
 
 
