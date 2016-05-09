@@ -11,35 +11,50 @@
         <style type="text/css">
         
             div.container {
-            width:75%;
-            margin:0 auto;
-            border:1px solid gray;
-            line-height:150%;
+                width:75%;
+                margin:0 auto;
+                border:1px solid gray;
+                line-height:150%;
             }
             
             div.header,div.footer {
-            padding:0.5em;
-            color:white;
-            background-color: darkslateblue;
-            clear:left;
+                padding:0.5em;
+                color:white;
+                background-color: darkslateblue;
+                clear:left;
             }
             
+            .footer {
+                text-align: center;
+            }
+            
+            
             h1.header {
-            padding:0;
-            margin:0;
+                padding:0;
+                margin:0;
+                line-height: 2em
             }
             
             div.left {
-            float:left;
-            width:160px;
-            margin:0;
-            padding:1em;
+                float:left;
+                width:160px;
+                margin:0;
+                padding:1em;
             }
             
             div.content {
-            margin-left:190px;
-            border-left:1px solid gray;
-            padding:1em;
+                margin-left:190px;
+                border-left:1px solid gray;
+                padding:1em;
+            }
+            
+            
+            /* how do O STRETCH THE NAVIGATION??????*/
+            
+            div.stretch {
+                text-align: center;
+                width: 100%;
+                background-color: dodgerblue;
             }
             
             ul {
@@ -66,6 +81,7 @@
 
             li {
                 display: inline;
+                
             }
             
             span {
@@ -85,14 +101,18 @@
     <body>
 <!-- visible page content goes here -->
         <div class="container">
-        <div class="header"><h1 class="header">W3Schools.com</h1></div>
+        <div class="header"><h1 class="header">A Practice in Floats</h1></div>
         
+            /* how do O STRETCH THE NAVIGATION??????*/
+        
+        <div class="stretch">
         <ul>
             <li><a href="#">Link one</a></li>
             <li><a href="#">Link two</a></li>
             <li><a href="#">Link three</a></li>
             <li><a href="#">Link four</a></li>
         </ul>
+        </div>
 
             <p>
             <span>I</span>n the example above, we let the ul element and the a element float to the left.
@@ -100,13 +120,11 @@
             </p>
             <p>In the paragraph above, the first letter of the text is embedded in a span element. The span element has a width that is 0.7 times the size of the current font. The font-size of the span element is 400% (quite large) and the line-height is 100%.</p>
             
-        <div class="left"><p>"Never increase, beyond what is necessary, the number of entities required to explain anything." William of Ockham (1285-1349)</p></div>
+        <div class="left"><p>some supplemental text here</p></div>
         <div class="content">
-        <h2>Free Web Building Tutorials</h2>
-        <p>At W3Schools you will find all the Web-building tutorials you need,
-        from basic HTML and XHTML to advanced XML, XSL, Multimedia and WAP.</p>
-        <p>W3Schools - The Largest Web Developers Site On The Net!</p></div>
-        <div class="footer">Copyright 1999-2005 by Refsnes Data.</div>
+        <h2>A title goes here</h2>
+        <p>Vestibulum est nibh, venenatis faucibus libero ac, porta gravida mi. Sed ut massa vestibulum, condimentum orci id, accumsan nisi. Fusce vulputate quam et ante facilisis dictum. Suspendisse vulputate fermentum nisl, at consequat ligula lacinia eu. Pellentesque et sapien quis mauris placerat fermentum quis in odio. Donec ut tristique ipsum. Cras aliquam sodales gravida.</p></div>
+        <div class="footer">footer</div>
         </div> 
         
         

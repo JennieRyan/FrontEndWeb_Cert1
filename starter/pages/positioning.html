@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+        <title>Positioning</title>
+        <style type="text/css">
+        
+            #container {
+                border: solid 2px #200;
+                width: 75%;
+                height: 200px;
+                margin: 0 auto;
+                position: relative;
+                /*position relative by itself doesn't do anything -- just a matter of controlling it's children*/
+            }
+            
+            #box1, #box2, #box3 {
+                width: 200px;
+                height: 200px;
+            }
+            
+            #box1 {
+                background-color: orange;
+                position: absolute;
+                /*absolute puts it up on it's own layer so it floats above other content*/
+                /*if parent container doesn't have a position specified -- this would position according to entire HTML.   IF parent container has a position assigned (i.e. relative) -- this then positions according to parent*/
+                top: -25px;
+                left: 25px;
+                    /*you only get one vertical and one horizontal specification*/
+                z-index: 5;
+            }
+            #box2 {
+                background-color: blue;
+                width: 200px;
+                position: absolute;
+                top: 25px;
+                left: 50px;
+                z-index: 4;
+                /*once we turn position on -- we add "z-index" we can control how objects are layered*/
+            }
+            #box3 {
+                background-color: forestgreen;
+                position: absolute;
+                /*doesn't have any z-index attribute assigned so it is in the furthest back*/
+            }
+/* css comment */
+        </style>
+    
+    </head>
+
+    <body>
+<!-- visible page content goes here -->
+        <div id="container">
+            <div id="box1">Hi!  I'm box 1!</div>
+            <div id="box2">Hi!  I'm box 2!</div>
+            <div id="box3">Hi!  I'm box 3!</div>
+        </div>
+        
+        
+    </body>
+    
+    
+</html>
