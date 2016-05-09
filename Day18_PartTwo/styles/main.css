@@ -15,10 +15,6 @@ header, nav, section, article, aside, footer, video, audio, main {
     margin: 0;
 }
 
-html {
-    background-color: #fff;
-}
-
 #container {
     width:940px;
     margin: 0 auto;
@@ -27,14 +23,13 @@ html {
 }
 
 body {
+    height: 100%;
     background: linear-gradient(#219dd1, #fff);
 }
-
 #fly {
     position: absolute;
-    z-index: 5;
-    top: 50px;
-    right: 10px;
+    top: 1px;
+    left: 875px;
 }
 
 #clearIt {
@@ -78,7 +73,7 @@ nav ul li:hover {
     color: #243b6d;
 }
 
-nav ul li a:active {
+nav ul li:active {
     background-color: goldenrod;
     color: #243b6d;
 }
@@ -99,14 +94,9 @@ main img {
     border: solid 1px black;
 }
 
-p{
+p, main a{
     margin: 0 10px 20px 20px;
     color: black;
-}
-
-main a{
-    margin: 0 10px 20px 75px;
-    color: #243b6d;
 }
 
 main a:hover {
@@ -117,11 +107,10 @@ main a:visited {
     color: forestgreen;
 }
 
-footer #sink {
+#sink {
     position: relative;
     float: left;
-    bottom: 60px;
-    left: -30px;
+    margin-bottom: 20%;
 }
 
 footer {
