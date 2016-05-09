@@ -71,10 +71,12 @@ header, nav, section, aside, article, footer, video, audio, main {      display:
     padding:0;
     margin:0;
 }
+
 body {
     font-family:'cabinregular',sans-serif;
     background-color:#2fa1e0;
-    background-image: linear-gradient(#2fa1e0, white);
+    background: linear-gradient(#2fa1e0, white) fixed;
+    position: relative;
 }
 header {
     background-color:#243a6c;
@@ -111,6 +113,7 @@ a:hover {
 }
 main{
     background-color:white;
+    padding-bottom: 9em;
 }
 img {
     max-width: 100%;
@@ -129,6 +132,12 @@ article {
 main article:first-child {
     margin-top:0;
 }
+
+video {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
 #article-secondary {
     background-color:#dceef8;
     margin:0;
@@ -136,10 +145,24 @@ main article:first-child {
 }
 #article-tertiary {
     margin-bottom:0;
-    padding-bottom:4em;
 }
 
 /* main navigation */
+
+h1.pageTitle a {
+    color: white;
+    text-decoration: none;
+}
+#menuIcon {
+    text-align: right;
+    padding:0 15px 10px;
+}
+#mainMenu {
+    position:absolute;
+    bottom:40px;
+    background-color:#2fa1e0;
+    width:100%;
+}
 #mainMenu a{
     color:white;
     text-decoration: none;
@@ -150,34 +173,50 @@ main article:first-child {
 #mainMenu a:hover {
     background-color:#0a193b;
 }
-#mainMenu li {
-    width:50%;
-    float:left;
-    list-style-type: none;
-}
-#mainMenu ul {
+#mainMenu li:nth-child(1){
     border-top:solid 1px white;
 }
-#mainMenu li:nth-of-type(odd) a {
-    border-right:solid 1px white;
-}
 /* end main navigation */
+
+.videoHolder {
+    height: 0;
+    padding-bottom: 56.25%; /* to get this number - need to divide video size (height divided into the width  aka height/width).  This video is 560 x 315 so.... 315/560=.5625*/
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.videoHolder iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mapHolder {
+    height: 0;
+    padding-bottom: 60%;
+    position: relative;
+}
+
+.mapHolder iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* footer rules */
 footer {
     background-color:#243a6c;
     background-image:linear-gradient(#243a6c, #2fa1e0);
     position: relative;
     text-align: center;
+    height:40px;
 }
-footer figure img {
-    position: absolute;
-    top:-2.5em;
-    left:0;
-}
-footer figcaption {
-    position: absolute;
-    top:-1.1em;
-    left:9.5em;
+footer figure {
+    display:none;
 }
 #copyright {
     padding: 1.5em 0 .5em 0;
@@ -221,11 +260,7 @@ a.button-more:after {
     content:" \2192";
 }
 
-/*
-**************** new rules for Friday **********************
-*/
 
-/* a few small screen rules we didn't have time to add. */
 h3 { 
     padding-top: 1em;
 }
@@ -257,6 +292,8 @@ a.button-more { /* sometimes the arrow on the button-more drops to the next line
     }
     #mainMenu {
         text-align: center; 
+        position: inherit;
+        background-color: transparent;
     }
     #mainMenu li { /* make menu items appear on one line and center them on page */
         display:inline-block;
@@ -266,6 +303,9 @@ a.button-more { /* sometimes the arrow on the button-more drops to the next line
     }
     #mainMenu li a, #mainMenu li:nth-child(1) { /* remove menu borders - from small screen rules*/
         border:none;
+    }
+    #menuIcon {
+        display: none;
     }
 
     article {margin:0;} /* zero out all margin settings from small screen rules */
@@ -281,12 +321,46 @@ a.button-more { /* sometimes the arrow on the button-more drops to the next line
         border-right:solid 1px #ccc; /* add seperator lines between the columns */
         border-left:solid 1px #ccc;
     }
-    .top {
+    
+    .article-interior{
+        padding: 0 2% 1em;
+        clear: both;
+    }
+    
+    footer figure {
+        display:block;
+    }
+    footer figure img {
+        position: absolute;
+        top:-2.5em;
+        left:0;
+    }
+    footer figcaption {
+        position: absolute;
+        top:-1.1em;
+        left:9.5em;
+    }
+    
+    .hidden, #mainMenu li.hidden {
         display: none;
     }
     
+    video, .videoContainer, .mapContainer{
+        float: right;
+        margin-left: 1em;
+        width: 45%; /*the i-frame didn't like max-width*/
+    }
+    
+    
 }
 
+/* Other things you guys can do on this file: 
+
+    1. make 'button-large' center align within their respective articles, add more margin to the top, they are still too tight to the other content
+    2. Create a mid screen view - have class work out together how layout should change with mid screen view, create an additional media query where the layout breaks. 
+    3. there are other small tweaks you guys can work on to improve the layout, have them adjust the file where necessary
+
+*/
 
 
 
