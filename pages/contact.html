@@ -37,106 +37,96 @@
             <article class="article-interior">
                 <h2>Contact Us</h2>
                 
-<!--                form-->
-       <!-- action = what should happen when the form is submitted -->
-        <form id="form-contact" action="#" method="post" autocomplete="on">
-            
-            <fieldset id="genInfo">
-                <legend>General Information</legend>
-                <ol>
-                    <li>
-<!--                       "for=" attribute links the name with the element (and is important for screen readers)-->
-                        <label for="name">Name:</label>
-                        <input type="text" name="name" id="name" title="Name" placeholder="Enter your full name" required autofocus pattern="[a-z]" />
-                    </li>
-                    <li>
-                        <label for="phone">Phone:</label>
-                        <input type="tel" name="phone" id="phone" title="Phone" placeholder="888-532-4658" required />
-                        <!--   to add in a pattern for phone could use (not recommended) pattern="\d{3}[\-]\d{3}[\-]\d{4}-->
-                    </li>
-                    <li>
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" id="email" title="Email" placeholder="name@domain.com" required />
-                    </li>
-                    <li>
-                        <label for="url">Web Address:</label>
-                        <input type="url" name="url" id="url" title="Web Address" placeholder="http://www.yourwebsite.com" />
-                    </li>
-                </ol>            
-            </fieldset>
-            
-            <fieldset id="sponsorInfo">
-                <legend>Sponsor A Turtle</legend>
-                <p>Pick a monthly amount to help save a turtle today.</p>
-                <ol class="radioBtnSet">
-                    <li>
-                        <input type="radio" name="sponsorAmt" id="sponsorAmt5" value="5" required/>
-                        <label for="sponsorAmt5">$5</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="sponsorAmt" id="sponsorAmt10" value="10" />
-                        <label for="sponsorAmt10">$10</label>
-                    </li>                    
-                    <li>
-                        <input type="radio" name="sponsorAmt" id="sponsorAmt20" value="20" />
-                        <label for="sponsorAmt20">$20</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="sponsorAmt" id="sponsorAmt50" value="50" />
-                        <label for="sponsorAmt50">$50</label>
-                    </li>                                       
-                    <li>
-                        <input type="radio" name="sponsorAmt" id="sponsorAmtCustom" value="custom" />
-                        <label for="sponsorAmtCustom">$</label>
-                        <input type="text" name="customAmt" id="form-sponsorAmt" title="Custom sponsor amount" pattern="\d{1,4}" />
-<!-- EXPRESSIONS -- specifies acceptable input (in this case - w= any character d=numeric value only {}=number of characters 4 ("\d{4}")  to change that to MAX characters use "\d{1,4}")-->
-                    </li>                                    
-                </ol>
-                <p class="comment">Thank you!  It's tax deductible.</p>
-                
-                <div class="dropChoice">
-                    <label for="region">Select a region to focus on</label>
-                    <select name="region" id="region">
-                        <option>Choose</option>
-                        <option value="west coast north america">West Coast, North America</option>
-                        <option value="west coast south america">West Coast, South America</option>
-                        <option value="east coast north america">East Coast, North America</option>
-                        <option value="east coast south america">East Coast, South America</option>
-                        <option value="caribbean">Caribbean</option>
-                        <option value="pacific islands">Pacific Islands</option>
-                    </select>
-                </div>
-            </fieldset>
-            
-            <fieldset id="newletter-comments">
-                <legend>Sign up for the newsletter</legend>
-                <ol class="checkSet">
-                   <li>
-                       <input type="checkbox" name="newsletter" id="enewsletter" value="e-newsletter" />
-                       <label for="enewsletter">e-newsletter</label>
-                       <input type="checkbox" name="newsletter" id="pnewsletter" value="print-newsletter" />
-                       <label for="pnewsletter">printed newsletter</label>
-                   </li> 
-                </ol>
-                
-                <label for="comment">Additional comments or questions:</label>
-                <textarea name="comment" id="comment" class="longText"></textarea>
-            </fieldset>
-            <button type="submit">Submit</button>
-        </form>
-
-
-<!--               endform-->
+                <!-- form -->
+                <form id="form-contact" action="#" method="post" autocomplete="on">
+                    <fieldset id="genInfo">
+                    <legend>General Information</legend>
+                        <ol>
+                            <li>
+                                <label for="name">Name:</label>
+                                <input type="text" name="name" id="name" title="Name" placeholder="Enter your full name" required autofocus pattern="[a-zA-Z ]+" />
+                            </li>
+                            <li>
+                                <label for="phone">Phone:</label>
+                                <input type="tel" name="phone" id="phone" title="Phone" placeholder="888-123-4567" required pattern="\d{3}[\-]\d{3}[\-]\d{4}" />
+                            </li>
+                            <li>
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" id="email" title="Email" placeholder="name@domain.com" required />
+                            </li>
+                            <li>
+                                <label for="url">Web address:</label>
+                                <input type="url" name="url" id="url" title="Web address" placeholder="http://www.yourdomain.com" />
+                            </li>
+                        </ol>
+                    </fieldset>
+                    <fieldset id="sponsorInfo">
+                        <legend>Sponsor a Turtle</legend>
+                        <p>Pick a monthly amount and help save a turtle today.</p>
+                        <ol class="radioBtnSet">
+                            <li>
+                                <input type="radio" name="sponsorAmt" id="sponsorAmt5" value="5" />
+                                <label for="sponsorAmt5">$5</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="sponsorAmt" id="sponsorAmt10" value="10" />
+                                <label for="sponsorAmt10">$10</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="sponsorAmt" id="sponsorAmt20" value="20" />
+                                <label for="sponsorAmt20">$20</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="sponsorAmt" id="sponsorAmt50" value="50" />
+                                <label for="sponsorAmt50">$50</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="sponsorAmt" id="sponsorAmtCustom" value="custom" />
+                                <label for="sponsorAmtCustom">$</label>
+                                <input type="text" name="customAmt" id="form-sponsorAmt" title="Custom sponsor amount" pattern="\d{1,4}" />
+                            </li>
+                        </ol>
+                        <p class="thanks">Thank you! It's tax deductible.</p>
+                        
+                        <div class="dropChoice">
+                            <label for="region">Select a region to focus on</label>
+                            <select name="region" id="region">
+                                <option>Choose:</option>
+                                <option value="west coast north america">West Coast, North America</option>
+                                <option value="west coast south america">West Coast, South America</option>
+                                <option value="east coast north america">East Coast, North America</option>
+                                <option value="east coast south america">East Coast, South America</option>
+                                <option value="caribbean">Caribbean</option>
+                                <option value="pacific islands">Pacific Islands</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset id="newsletter-comments">
+                    <legend>Sign-up for our newsletter</legend>
+                        <ol class="checkSet">
+                            <li>
+                                <input type="checkbox" name="newsletter" id="enewsletter" value="e-news" checked />
+                                <label for="enewsletter">e-newsletter</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="newsletter" id="pnewsletter"  value="print-news" />
+                                <label for="pnewsletter"> printed newsletter</label>
+                            </li>
+                        </ol>
+                        
+                        <label for="comment" class="commentLabel">Additional questions or comments</label>
+                        <textarea name="comment" id="comment" class="longText"></textarea>
+                    </fieldset>
+                    <button type="submit">Submit</button>
+                </form>
+                <!-- end form -->
                 <div class="mapContainer">
                     <div class="mapHolder">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3351.8402192289486!2d-117.27372262108607!3d32.84948198104336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc03fc47e38421%3A0xcf57d7ada5663b04!2s1250+Prospect+St%2C+San+Diego%2C+CA+92037!5e0!3m2!1sen!2sus!4v1461179646635" width="500" height="350" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
-                
-
-                
-                
-                
+        
             </article>
             
         </main>
