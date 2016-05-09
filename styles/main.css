@@ -1,6 +1,69 @@
 /*
     colors:
+        light blue: #dceef8
+        medium blue: #2fa1e0
+        dark blue: #243a6c  
+        dark navy blue: #0a193b
+        regular links: #196a96
+        hover links: #107571
 */
+/*embedded fonts  */
+@font-face {
+    font-family: 'cabinbold';
+    src: url('../fonts/cabin-bold-webfont.eot');
+    src: url('../fonts/cabin-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cabin-bold-webfont.woff2') format('woff2'),
+         url('../fonts/cabin-bold-webfont.woff') format('woff'),
+         url('../fonts/cabin-bold-webfont.ttf') format('truetype'),
+         url('../fonts/cabin-bold-webfont.svg#cabinbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'cabinitalic';
+    src: url('../fonts/cabin-italic-webfont.eot');
+    src: url('../fonts/cabin-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cabin-italic-webfont.woff2') format('woff2'),
+         url('../fonts/cabin-italic-webfont.woff') format('woff'),
+         url('../fonts/cabin-italic-webfont.ttf') format('truetype'),
+         url('../fonts/cabin-italic-webfont.svg#cabinitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'cabinregular';
+    src: url('../fonts/cabin-regular-webfont.eot');
+    src: url('../fonts/cabin-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cabin-regular-webfont.woff2') format('woff2'),
+         url('../fonts/cabin-regular-webfont.woff') format('woff'),
+         url('../fonts/cabin-regular-webfont.ttf') format('truetype'),
+         url('../fonts/cabin-regular-webfont.svg#cabinregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'fengardo_neueblack';
+    src: url('../fonts/fengardoneue_black-webfont.eot');
+    src: url('../fonts/fengardoneue_black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fengardoneue_black-webfont.woff2') format('woff2'),
+         url('../fonts/fengardoneue_black-webfont.woff') format('woff'),
+         url('../fonts/fengardoneue_black-webfont.ttf') format('truetype'),
+         url('../fonts/fengardoneue_black-webfont.svg#fengardo_neueblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 header, nav, section, aside, article, footer, video, audio, main {      display: block;
 }
@@ -8,3 +71,388 @@ header, nav, section, aside, article, footer, video, audio, main {      display:
     padding:0;
     margin:0;
 }
+
+body {
+    font-family:'cabinregular',sans-serif;
+    background-color:#2fa1e0;
+    background: linear-gradient(#2fa1e0, white) fixed;
+    position: relative;
+}
+header {
+    background-color:#243a6c;
+    background-image:linear-gradient(#2fa1e0, #243a6c 80%);
+    color:white;
+}
+h1 {
+    font-family:'fengardo_neueblack', sans-serif;
+    font-size:3.75em; /* 60px */
+    line-height: 1.5;
+    text-shadow: 4px 4px 6px #000;
+    letter-spacing: 2px;
+    text-align: center;
+}
+h2 {
+    font-size:2.5em;
+    color:#243a6c;
+    text-align: center;
+    border-bottom:dotted 2px #243a6c;
+    margin:0 0 .4em;
+    padding:.4em 0 0;
+}
+h3 {
+    padding-top: 1em;
+}
+a {
+    color:#196a96;
+}
+a:visited {
+    color:#0a193b;
+}
+a:hover {
+    color:#107571;
+}
+main{
+    background-color:white;
+    padding-bottom:9em;
+}
+img {
+    max-width: 100%;
+    height:auto;
+}
+
+figcaption {
+    font-size:.7em;
+    font-style: italic;
+    font-family:Georgia, serif;
+    text-align: center;
+}
+article {
+    margin:1em .6em;
+}
+main article:first-child {
+    margin-top:0;
+}
+video {
+    max-width:100%;
+    height:auto;
+    margin-bottom:1em;
+}
+#article-secondary {
+    background-color:#dceef8;
+    margin:0;
+    padding:0 .6em;
+}
+#article-tertiary {
+    margin-bottom:0;
+}
+
+/* main navigation */
+h1.pageTitle a {
+    color:white;
+    text-decoration: none;
+}
+#menuIcon {
+    text-align: right;
+    padding:0 15px 10px;
+}
+#mainMenu {
+    position:absolute;
+    bottom:40px;
+    background-color:#2fa1e0;
+    width:100%;
+}
+#mainMenu a{
+    color:white;
+    text-decoration: none;
+    display: block;
+    padding:.2em .6em;
+    border-bottom:solid 1px white; 
+}
+#mainMenu a:hover {
+    background-color:#0a193b;
+}
+#mainMenu li:nth-child(1){
+    border-top:solid 1px white;
+}
+/* end main navigation */
+.videoHolder {
+    height:0;
+    padding-bottom:56.25%; /* to get this number you need to divide height into the width, so for this example the video is 560x315 */
+    position: relative;
+    margin-bottom:1em;
+}
+.videoHolder iframe {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.mapHolder {
+    height:0;
+    padding-bottom:60%;
+    position: relative;
+    margin-top:1em;
+}
+.mapHolder iframe {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    max-width:500px;
+    height:100%;
+    max-height:300px;
+}
+
+/* footer rules */
+footer {
+    background-color:#243a6c;
+    background-image:linear-gradient(#243a6c, #2fa1e0);
+    position: relative;
+    text-align: center;
+    height:40px;
+}
+footer figure {
+    display:none;
+}
+#copyright {
+    padding: 1.5em 0 .5em 0;
+    color:white;
+    font-size:.7em;
+}
+
+
+/* general classes */
+.onRight {
+    float:right;
+    margin-left:.2em;
+}
+.onLeft {
+    float:left;
+    margin-right:.2em;
+}
+.clearIt {
+    clear:both;
+}
+.halfSize {
+    max-width:50%;
+}
+a.button-large {
+    color:white;
+    background-color:#243a6c;
+    text-decoration: none;
+    padding:.5em .2em;
+    border-radius: .25em;
+    box-shadow:3px 3px 6px #333;
+    display: inline-block;
+    margin:.6em 0;
+}
+a:hover.button-large {
+    background-color:#107571;
+}
+a.button-more {
+    text-decoration: none;
+}
+a.button-more:after {
+    content:" \2192";
+}
+
+h3 { 
+    padding-top: 1em;
+}
+a.button-more { 
+    white-space: nowrap;
+}
+.center {
+        text-align: center;
+    }
+.top {
+    position: absolute;
+    top:-1.1em;
+    right:15px;
+    font-style: bold;
+    font-size: .9em;
+}
+.top a {
+    text-decoration: none;
+}
+
+/* form rules */
+#form-contact {
+    width:95%;
+    margin:0 auto 1em;
+}
+fieldset {
+    border:none;
+    margin: 0;
+    padding: 0;
+}
+legend {
+    display: block;
+    padding:20px 10px 5px;
+    font-weight: bold;
+    font-size: 1.25em;
+    text-shadow: 1px 1px 1px #999;
+    color:#243a6c;
+    border-bottom: solid 3px;
+    width:100%;
+    text-align: center;
+    margin-bottom:.75em;
+}
+input, textarea {
+    background-color:#dceef8;
+    padding:5px;
+    margin:0;
+    border:1px #999 solid;
+    width: 50%
+}
+input[type=radio], input[type=checkbox] {
+    width: auto;
+}
+input#form-sponsorAmt {
+    width:2.5em;
+}
+textarea {
+    width:60%;
+    min-height:6em;
+}
+#form-contact ol {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+#form-contact li {
+    padding-bottom: 10px;
+} 
+#form-contact .radioBtnSet li, #form-contact .checkSet li  {
+    display: inline-block;
+    margin-right:8px;
+}
+#form-contact label {
+    width:30%;
+    display: inline-block;
+    text-align: right;
+}
+#form-contact .radioBtnSet label, #form-contact .dropChoice label, #form-contact .checkSet label {
+    width: auto;
+}
+button[type=submit] {
+    color:#fff;
+    background-color:#243a6c;
+    padding:5px 15px;
+    border-radius:8px;
+    box-shadow:2px 2px 4px #999;
+    margin: 1em auto 0;
+    display: block;
+}
+button[type=submit]:hover {
+    background-color:#666;
+}
+.commentLabel {
+    float:left;
+    padding-right:.5em;
+}
+.thanks {
+    margin:-8px 0 1em;
+    font-style: italic;
+    color:#999;
+}
+/* end form rules */
+
+
+/* for larger screens */
+@media screen and (min-width:670px) { /* MEDIA QUERIES */
+    body {
+        max-width: 1000px; /* set a maximum width for the page */
+        margin: 0 auto; /* horizontally center it as  a block */
+    }
+    h2 {
+        font-size: 1.75em; /* adjust h2 size */
+    }
+    #mainMenu {
+        text-align: center; 
+        position: inherit;
+        background-color: transparent;
+    }
+    #mainMenu li { /* make menu items appear on one line and center them on page */
+        display:inline-block;
+        border:none;
+        width:24%;
+        text-align:center;
+    }
+    #mainMenu li a, #mainMenu li:nth-child(1) { /* remove menu borders - from small screen rules*/
+        border:none;
+    }
+    #menuIcon {
+        display: none;
+    }
+
+    article {margin:0;} /* zero out all margin settings from small screen rules */
+    #article-primary, #article-secondary, #article-tertiary { /* style all articles to appear side-by-sideand to */
+        float:right;
+        width:33.2%; /* fill available space, have to be less than 33.3% to accomdate for border on middle article (next rule), show this first with teh following rule and then change to next rule to make some space on right and left */
+        width:29.2%; /* subtract 2% from each column and add that 2% onto the right and left padding (next rule) to create spacing between columns. */
+        padding: 0 2% 1em; /* the 2% is to create the spacing between the columns and the 1em bottom is to make it so it doesn't crash into footer */
+    }
+    
+    #article-secondary {
+        background-color:white; /* make middle column have white background */
+        border-right:solid 1px #ccc; /* add seperator lines between the columns */
+        border-left:solid 1px #ccc;
+    }
+    .article-interior {
+        padding:0 2% 1em;
+        clear: both;
+    }
+    footer figure {
+        display:block;
+    }
+    footer figure img {
+        position: absolute;
+        top:-2.5em;
+        left:0;
+    }
+    footer figcaption {
+        position: absolute;
+        top:-1.1em;
+        left:9.5em;
+    }
+    
+    .hidden, #mainMenu li.hidden {
+        display:none;
+    }
+    video, .videoContainer {
+        float: right;
+        margin-left:1em;
+        width:45%;
+    }
+    #form-contact {
+        width:45%;
+        margin:0 10px;
+    }
+    .mapContainer {
+        width:45%;
+        position:absolute;
+        top:85px;
+        right:15px;
+    }
+    .article-interior {
+        position:relative;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
