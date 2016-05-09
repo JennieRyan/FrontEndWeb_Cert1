@@ -113,7 +113,7 @@ a:hover {
 }
 main{
     background-color:white;
-    padding-bottom: 9em;
+    padding-bottom:9em;
 }
 img {
     max-width: 100%;
@@ -132,11 +132,10 @@ article {
 main article:first-child {
     margin-top:0;
 }
-
 video {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 1em;
+    max-width:100%;
+    height:auto;
+    margin-bottom:1em;
 }
 #article-secondary {
     background-color:#dceef8;
@@ -148,9 +147,8 @@ video {
 }
 
 /* main navigation */
-
 h1.pageTitle a {
-    color: white;
+    color:white;
     text-decoration: none;
 }
 #menuIcon {
@@ -177,34 +175,33 @@ h1.pageTitle a {
     border-top:solid 1px white;
 }
 /* end main navigation */
-
 .videoHolder {
-    height: 0;
-    padding-bottom: 56.25%; /* to get this number - need to divide video size (height divided into the width  aka height/width).  This video is 560 x 315 so.... 315/560=.5625*/
+    height:0;
+    padding-bottom:56.25%; /* to get this number you need to divide height into the width, so for this example the video is 560x315 */
     position: relative;
-    margin-bottom: 1em;
+    margin-bottom:1em;
 }
-
 .videoHolder iframe {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
 }
-
 .mapHolder {
-    height: 0;
-    padding-bottom: 60%;
+    height:0;
+    padding-bottom:60%;
     position: relative;
+    margin-top:1em;
 }
-
 .mapHolder iframe {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top:0;
+    left:0;
+    width:100%;
+    max-width:500px;
+    height:100%;
+    max-height:300px;
 }
 
 /* footer rules */
@@ -260,11 +257,10 @@ a.button-more:after {
     content:" \2192";
 }
 
-
 h3 { 
     padding-top: 1em;
 }
-a.button-more { /* sometimes the arrow on the button-more drops to the next line to prevent this from happening add the following to our existing rule, now the link words and our arrow will stay together no matter what. */
+a.button-more { 
     white-space: nowrap;
 }
 .center {
@@ -321,12 +317,10 @@ a.button-more { /* sometimes the arrow on the button-more drops to the next line
         border-right:solid 1px #ccc; /* add seperator lines between the columns */
         border-left:solid 1px #ccc;
     }
-    
-    .article-interior{
-        padding: 0 2% 1em;
+    .article-interior {
+        padding:0 2% 1em;
         clear: both;
     }
-    
     footer figure {
         display:block;
     }
@@ -342,25 +336,16 @@ a.button-more { /* sometimes the arrow on the button-more drops to the next line
     }
     
     .hidden, #mainMenu li.hidden {
-        display: none;
+        display:none;
     }
-    
-    video, .videoContainer, .mapContainer{
+    video, .videoContainer, .mapContainer {
         float: right;
-        margin-left: 1em;
-        width: 45%; /*the i-frame didn't like max-width*/
+        margin-left:1em;
+        width:45%;
     }
-    
     
 }
 
-/* Other things you guys can do on this file: 
-
-    1. make 'button-large' center align within their respective articles, add more margin to the top, they are still too tight to the other content
-    2. Create a mid screen view - have class work out together how layout should change with mid screen view, create an additional media query where the layout breaks. 
-    3. there are other small tweaks you guys can work on to improve the layout, have them adjust the file where necessary
-
-*/
 
 
 
