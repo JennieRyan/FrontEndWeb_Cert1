@@ -1,0 +1,33 @@
+/*
+    colors:
+*/
+
+header nav, section, article, main, footer, video, aside, audio {
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5em;
+    margin: 15px;
+    background-color: #369;
+    color: #fff;
+}
+
+/* "max-width" is another way of saying "less-than" */
+@media screen and (max-width:900px) {
+    body {
+        background-color: darkred;
+    }
+}
+
+@media screen and (max-width:600px) {
+    body {
+        background-color: black;
+    }
+}
