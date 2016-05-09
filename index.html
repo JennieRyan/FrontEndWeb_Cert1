@@ -1,33 +1,159 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-   <html xmlns="http://www.w3.org/1999/xhtml" >
-     
-     
-      <head>
-         <title><!--This Displays at Top of Browser--> My First Webpage</title>
-         
-         <meta charset="utf-8" />
-         <!--passes on information as attributes and values-->
-        
-                
+<!doctype html>
 
-          
-      </head>
-      
-      
-      <body>
-         <!--this shows up on page-->
-         <!-- times new roman is the default font for google -->
-         
-          <h1>Hello world, this is my first page</h1>
-          <h2> this is a slightly less excited headline</h2>
-          <h3> this is h3 </h3>
-          <h4> this is h4 </h4>
-          <h5> this is h5 </h5>
-          <h6> this is h6 </h6>
-          <p> just writing some paragraph text -- see how it differs from the header h# tags!? </p>
-          
-      </body>
-      
-       
-   </html>
+
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8" />
+    <title> HTML 5 </title>
+    
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+    
+    <link href='https://fonts.googleapis.com/css?family=Fanwood+Text:400,400italic|Catamaran:400,700' rel='stylesheet' type='text/css'>
+    <link href="/styles/main.css" type="text/css" rel="stylesheet" />
+
+</head>
+    
+<body>
+    <header>  
+        <h1>The HTML5 / CSS3 Blog</h1>
+    </header>
+    
+    <nav id="main">
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+            <li><a href="#">Link 5</a></li>
+        </ul>
+    </nav>
+    
+    <section id="intro">
+        <header>
+            <h2>Do you love new technology as much as I do?</h2>
+            <h3>HTML5 gives more meaning to your content</h3>
+        </header>
+        
+        <article>
+            <p>HTML 5 is the next major version of HTML. It introduces a bunch of new elements that will make our pages more semantic. This will make it a lot easier for search engines and screenreaders to navigate our pages, and improve the web experience for everyone.</p>
+            <img src="images/header.png" alt="html5" />
+        </article>
+    </section> <!-- close intro section -->
+    
+    <aside>
+        <section>
+            <header>
+                <h3>Categories</h3>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="#">Category 1</a></li>
+                    <li><a href="#">Category 2</a></li>
+                    <li><a href="#">Category 3</a></li>
+                    <li><a href="#">Category 4</a></li>
+                    <li><a href="#">Category 5</a></li>
+                </ul>
+            </nav>
+        </section>
+        
+        <section>
+            <header>
+                <h3>Archives</h3>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="#">Oct 2015</a></li>
+                    <li><a href="#">Nov 2015</a></li>
+                    <li><a href="#">Dec 2015</a></li>
+                    <li><a href="#">Jan 2016</a></li>
+                    <li><a href="#">Feb 2016</a></li>
+                </ul>
+            </nav>
+        </section>
+    </aside>
+    
+    <section id="blogPost">
+        <header>
+            <h2>HTML5 - What's new?</h2>
+            <p>Posted on March 1, 2016 by <a href="#">Jennie</a></p>
+        </header>
+        
+        <article>
+            <p>In HTML 5 there are specific tags meant for marking up the header, navigation, sidebar and footer. First, take a look at the markup and I’ll explain afterwards:</p>
+            <figure>
+                <img src="images/codeExample.jpg" alt="code example" />
+                <figcaption> HTML5 code example</figcaption>
+             </figure>
+             
+             <p>It still looks like HTML markup, but there are a few things to note: In HTML 5, there is only one doctype. It is declared in the beginning of the page by <!doctype html>. It simply tells the browser that it’s dealing with an HTML-document.
+
+            <p>The new tag header is wrapped around introductory elements, such as the page title or a logo. It could also contain a table of contents or a search form. Every header typically contains a heading tag from &lt;h1&gt; to &lt;h6&gt;. In this case the header is used to introduce the whole page, but we’ll use it to introduce a section of the page a little later.</p>
+
+            <p>The nav-tag is used to contain navigational elements, such as the main navigation on a site or more specialized navigation like next/previous-links.</p>
+
+            <p>The section-tag is used to denote a section in the document. It can contain all kinds of markup and multiple sections can be nested inside each other.</p>
+
+            <p>Aside is used to wrap around content related to the main content of the page that could still stand on it’s own and make sense. In this case we’re using it for the sidebar.</p>
+
+            <p>The footer-tag should contain additional information about the main content, such as info about who wrote it, copyright information, links to related documents and so on.</p>
+
+            <p>Instead of using divs to contain different sections of the page we are now using appropriate, semantic tags. They will make it a lot easier for search engines and screen readers to figure out what’s what in a page.</p>
+        </article>
+    </section><!-- close blogPost section -->
+    
+    <section id="comments">
+        <article>
+            <header><a href="#">Bozo the Clown</a> on <time datetime="2016-03-10T09:00:45">March 10, 2016 at 9:00am</time>
+            </header>
+            <p>Praesent hendrerit velit vitae condimentum sollicitudin. Etiam a quam in nibh egestas dictum a ac risus. Aliquam sed sapien at dui dapibus tempor. Morbi dignissim vulputate dignissim. Nunc dapibus pharetra luctus. Integer bibendum auctor vehicula.</p>
+        </article>
+        
+        <article>
+            <header><a href="#">Hipster Bob</a> on <time datetime="2016-03-15T011:20:45">March 15, 2016 at 11:20am</time>
+            </header>
+            <p>Everyday carry fap poutine, semiotics tote bag pour-over man braid brunch. VHS pug retro franzen, swag pickled intelligentsia leggings man braid paleo slow-carb. Aesthetic vice YOLO, etsy beard church-key wolf chicharrones scenester tote bag shabby chic. Poutine post-ironic photo booth trust fund, tote bag cornhole butcher seitan whatever meditation.</p>
+        </article>
+        
+        <article>
+            <header><a href="#">Miranda Randa</a> on <time datetime="2016-03-15T016:45:10">March 15, 2016 at 4:45am</time>
+            </header>
+            <p>Nap all day leave dead animals as gifts, so hunt anything that moves, so intently sniff hand. Behind the couch. Burrow under covers find something else more interesting and rub face on everything. Give attitude behind the couch. Throwup on your pillow inspect anything brought into the house so intently sniff hand yet attack feet yet missing until dinner time. Swat at dog.</p>
+        </article>
+    </section>
+    <footer>
+        <section>
+            <header>
+                <h3>About</h3>
+                <p>And don't let go and so it seems that i will love her beatles - medley: kansas city/hey-hey-hey-hey! (live at the bbc) but she was another man holding back these tears in my eyes i heard the bells on christmas day i wanna be famous, a star on the screen i've got the ill technique so you know me fe well in your sweaty hands it makes me want to cry no, i can't wake up none of life's dreams can last see how they smile like pigs in a sty the man of a thousand voices talking perfectly loud they say that everyone, wants someone understand you ask me for a contribution you could find better things to do, than to break my.</p>
+            </header>
+        </section>
+        <section id="resources">
+            <header>
+                <h3>Other Resources:</h3>
+            </header>
+                <ul>
+                    <li><a href="#">W3 Schools</a></li>
+                    <li><a href="#">HTML 5</a></li>
+                    <li><a href="#">CSS Zen Garden</a></li>
+                    <li><a href="#">Lynda</a></li>
+                    <li><a href="#">Morguefiles</a></li>
+                </ul>
+        </section>
+                <section id="popular">
+            <header>
+                <h3>Popular Posts</h3>
+            </header>
+                <ul>
+                    <li><a href="#">HTML5 - all new</a></li>
+                    <li><a href="#">HTML5 - everything</a></li>
+                    <li><a href="#">What you can do with CSS</a></li>
+                    <li><a href="#">Video and audio tags</a></li>
+                    <li><a href="#">How to tag time</a></li>
+                </ul>
+        </section>
+    </footer>
+</body>
+</html>

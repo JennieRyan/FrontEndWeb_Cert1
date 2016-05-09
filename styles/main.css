@@ -1,0 +1,77 @@
+/*
+    colors used:
+    fonts used: font-family: 'Fanwood Text', serif;
+                font-family: 'Catamaran', sans-serif;
+*/
+
+header, nav, section, article, aside, footer, video, audio, main {
+    display: block;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Catamaran', sans-serif;
+    background-color: #f0f0f0;
+    width: 940px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2.125em; /* this equals 34 pixels (34/16=2.125)     16 pixels is the base size of a browser*/
+    font-family: 'Fanwood Text', serif;
+    line-height: 2.5;  /* takes whatever font size is and doubles it*/
+}
+
+h2 {
+    font-family: 'Fanwood Text', serif;
+    font-size: 1.75em; /*28px*/
+    line-height: 2;
+}
+
+h3 {
+    font-size: 1.375em; /*22px*/
+    line-height: 1.5;
+}
+
+p {
+    font-size: .875em; /*14px*/
+    line-height: 1.5;
+    padding-bottom: 20px;
+}
+
+/*navigation */
+nav#main {
+    background-color: #333;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+nav#main ul {
+    width: 940px;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+nav#main li {
+    float: left;
+}
+
+nav#main a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    width: 140px;
+    text-align: center;
+    margin-right: 20px;
+    padding: 4px 0;
+}
+
+nav#main a:hover {
+    color: #fff;
+}
