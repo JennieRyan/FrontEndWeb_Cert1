@@ -139,6 +139,8 @@ ul {
     margin-bottom:12px;
 }
 
+/*internal 2 column pages*/
+
 .colA {
     width: 25%;
     float: left;
@@ -154,6 +156,118 @@ ul {
 .spaceRT {
     margin-right: 20px;
 }
+
+/* internal 3 colum pages */
+
+#colA3up {
+    width: 240px;
+    float: left;
+    margin-right: 15px;
+}
+
+#colB3up {
+    width: 490px;
+    margin-right: 15px;
+    float: left;
+}
+
+#colC3up {
+    float: left;
+    width: 180px;
+}
+
+/*internal 2 column big on left small on right */
+
+#colA2 {
+    width: 73%;
+    float: left;
+    padding-right: 2%;
+    border-right: dashed 2px #016a99;
+}
+
+#colB2 {
+    float: left;
+    width: 18%;
+    padding-left: 2%
+}
+/*contactus -- alternate column layout */
+#colA2up {
+    width: 738px;
+    border-right: solid 2px #666;
+    padding-right: 10px;
+    margin-right: 10px;
+    float: left;
+}
+
+/*image sprite */
+
+.socialMedia {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.socialMedia li{
+    display: inline-block;
+    margin: 0 10px 10px 10px;
+}
+
+.socialMedia a {
+    width: 50px;
+    height: 49px;
+    display: inline-block;
+    background-image: url(../images/socialMediaSprite.gif);
+    background-repeat: no-repeat;
+}
+
+a.fb {
+    background-position: 0 0;
+}
+a:hover.fb {
+    background-position: 0 -50px;
+}
+
+a.twitter {
+    background-position: -50px 0;
+}
+
+a:hover.twitter {
+    background-position: -50px -50px;
+}
+
+a.youtube {
+    background-position: -100px 0;
+}
+
+a:hover.youtube {
+    background-position: -100px -50px;
+}
+
+a.instagram {
+    background-position: -150px 0;
+}
+
+a:hover.instagram {
+    background-position: -150px -50px;
+}
+
+a.linkedin {
+    background-position: -200px 0;
+}
+
+a:hover.linkedin {
+    background-position: -200px -50px;
+}
+
+a.fish {
+    background-position: -250px 0;
+}
+
+a:hover.fish {
+    background-position: -250px -50px;
+}
+
+/*footer*/
 
 #footer {
     background-color:#016a99;
