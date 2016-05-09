@@ -421,10 +421,25 @@ button[type=submit]:hover {
     .hidden, #mainMenu li.hidden {
         display:none;
     }
-    video, .videoContainer, .mapContainer {
+    video, .videoContainer {
         float: right;
         margin-left:1em;
         width:45%;
+    }
+    #form-contact {
+        width:45%;
+        margin:0 10px 0;
+    }
+    
+     .mapContainer {
+        width: 45%;
+        position: absolute;
+        top: 85px;
+        right: 15px;
+    }
+    
+    .article-interior {
+        position: relative;
     }
     
 }
