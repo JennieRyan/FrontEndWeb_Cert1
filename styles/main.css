@@ -1,176 +1,92 @@
 /*
     colors:
-    dark blue   #243a6c
-    light blue  #219dd1
-    orange      #c37816
+    medium blue: #2fa1e0
+    dark blue: #243a6c
+    regular link: #196a96
 */
+@font-face {
+    font-family: 'cabinbold';
+    src: url('../fonts/cabin-bold-webfont.eot');
+    src: url('../fonts/cabin-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cabin-bold-webfont.woff2') format('woff2'),
+         url('../fonts/cabin-bold-webfont.woff') format('woff'),
+         url('../fonts/cabin-bold-webfont.ttf') format('truetype'),
+         url('../fonts/cabin-bold-webfont.svg#cabinbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
-header nav, section, article, main, footer, video, aside, audio {
-    display: block;
 }
 
+
+
+
+@font-face {
+    font-family: 'cabinitalic';
+    src: url('../fonts/cabin-italic-webfont.eot');
+    src: url('../fonts/cabin-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cabin-italic-webfont.woff2') format('woff2'),
+         url('../fonts/cabin-italic-webfont.woff') format('woff'),
+         url('../fonts/cabin-italic-webfont.ttf') format('truetype'),
+         url('../fonts/cabin-italic-webfont.svg#cabinitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'cabinregular';
+    src: url('../fonts/cabin-regular-webfont.eot');
+    src: url('../fonts/cabin-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cabin-regular-webfont.woff2') format('woff2'),
+         url('../fonts/cabin-regular-webfont.woff') format('woff'),
+         url('../fonts/cabin-regular-webfont.ttf') format('truetype'),
+         url('../fonts/cabin-regular-webfont.svg#cabinregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'fengardo_neueblack';
+    src: url('../fonts/fengardoneue_black-webfont.eot');
+    src: url('../fonts/fengardoneue_black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fengardoneue_black-webfont.woff2') format('woff2'),
+         url('../fonts/fengardoneue_black-webfont.woff') format('woff'),
+         url('../fonts/fengardoneue_black-webfont.ttf') format('truetype'),
+         url('../fonts/fengardoneue_black-webfont.svg#fengardo_neueblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+header, nav, section, aside, article, footer, video, audio, main {      display: block;
+}
 * {
-    margin: 0;
-    padding: 0;
+    padding:0;
+    margin:0;
 }
 
 body {
-    background:url(../images/background.jpg) repeat-x #fff;
-    font-family: sans-serif;
-}
-
-#container {
-    width: 960px;
-    margin: 0 auto;
-    border: solid 3px #fff;
-}
-/* links */
-a {
-    color: #233f71;
-}
-
-a:visited {
-    color: #333;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #c37816;
-}
-
-h1 {
-    font-size: 1.25em; /*20px*/
-    color: #219dd1;
-    padding: 0 20px 10px;
-    background-color: #243a6c;
-    font-weight: normal;
-    font-style: italic;
-}
-
-ul, ol, p {
-    padding: 10px;
+    font-family: cabinregular, sans-serif;
+    background-color: #2fa1e0;
+    /* background-image: radial-gradient(circle at top right, #2fa1e0, white);
+    background-image: linear-gradient(green 10%, blue 20%, white 50%);  --- numbers signify the amount of time the color has to transition to the next color*/
 }
 
 header {
     background-color: #243a6c;
-    position: relative; /* to address the turtle image positioning and allow it to be positioned relative to header*/
+    background-image: linear-gradient(#243a6c 80%, #2fa1e0);
+    color: white;
 }
-
-#turtlePic {
-    position: absolute;
-    right: -90px;
-    top: 0;
-}
-
-/*navigation*/
-
-/*#mainNavigation {
-font-size: .874em;*/
-
-#mainNavigation ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 20px;
-    font-size: 14px;
-} /*used pixels for font size instead of ems so that it wouldn't inherit/double down the nested items*/
-
-#mainNavigation li {
-    width: 150px;
-    float: left;
-    margin: 5px 15px 20px 0;
-    border: solid 1px #ccc;
-    text-align: center;
-    background-color:#243a6c;/*otherwise all buttons are transparent and show background through them*/
-} /*targets list items (buttons you see and ones that are hidden) that are children of main navigation */
-
-#mainNavigation ul li li{
-    margin: 0;
-    border-top: none;    
-} /*removed top border to eliminate "double up" border on drop down list items*/
-
-/* #mainNavigation ul li:hover ul 
-    display: block;
-to show hidden drop down when main navigation is hovered -- ANY LI that's hovered*/
-
-#mainNavigation ul li:hover > ul {
-    display: block;
-} /* > means direct descendent -- by using this greater than symbol we're saving a couple extra commands that would be necessary for the 3rd tier menu... as this is super-specific any UL that's a direct decendent of li:hover will be affected*/
-
-#mainNavigation ul li {
-    position: relative;
-    z-index: 5; /*so that the drop down menu doesn't disappear behind the video on this page*/
-} /*hooks (lines up) sub menus to the parent list items*/
-
-#mainNavigation ul:after {
-    content: "";
-    clear:both;
-    display: block;
-} /*a pseudo class to make something we can apply a clear to*/
-
-
-/* SUB MENU ITEMS */
-
-#mainNavigation ul ul {
-    margin: 0;
-    display: none; /*to hide initial drop down menu*/
-    position: absolute; /* so the menu isn't jumping around -- they're hanging OVER the rest of the content*/
-    top: 100%;
-    left: -1px; /* to compensate for the 1px border */
-    border-top: solid 1px #ccc; /* to put back in the seperator line between main navigation and sub menu*/
-} 
-
-/*third tier*/
-
-#mainNavigation ul ul ul {
-    top: 10%;
-    left: 90%;
-} /* makes 3rd tier menu slightly offset from 2nd tier drop down menu -- could also be 0% and 100% respectively */
-
-/*  #mainNavigation ul li:hover ul ul 
-    display: none;  
-to hide 3rd tier navigation */
-
-/* #mainNavigation ul ul li:hover ul 
-    display: block;
-to show the 3rd tier navigation when relevant 2nd tier UL list item is hovered iver */
-
-/* these two items above are commented out due to using the greater than symbol > in the initial hover statement -- by using the > symbol it applies to both the 2nd & 3rd tier items rendering these two redundant comments unnecessary*/
-
-/* END SUB MENU ITEMS */
-
-
-#mainNavigation a {
-    color: #fff;
-    padding: 6px;
-    text-decoration: none;
-    display: block;
-    font-weight: bold;
-} /*changes all links with ID of mainNavigation across the board*/
-
-#mainNavigation a:hover {
-    background-color: #333;
-} /*changes all links with ID of mainNavigation across the board*/
-
-
-/* end navigation */
-
-footer {
-    margin-top: 25px;
-    background-color: #243a6c;
-    color: #ccc;
-    text-align: center;
-    border-top: solid 3px #fff;
-    position: relative; /* to address the turtle image positioning and allow it to be positioned relative to header */
-}
-
-#difference {
-    position: absolute;
-    left: -40px;
-    bottom: 0;
-}
-
-video {
-    border: solid 3px #fff;
-    float: left;
-    margin: 15px;
+h1 {
+    font-family: fengardo_neueblack, sans-serif;
+    font-size: 3.75em; /*60px*/
+    line-height: 1.5;
+    text-shadow: 2px 2px 6px #000;
+    letter-spacing: 2px;
 }
