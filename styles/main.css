@@ -75,7 +75,6 @@ body {
     font-family:'cabinregular',sans-serif;
     background-color:#2fa1e0;
     background-image: linear-gradient(#2fa1e0, white);
-    position: relative;
 }
 header {
     background-color:#243a6c;
@@ -137,20 +136,10 @@ main article:first-child {
 }
 #article-tertiary {
     margin-bottom:0;
-    padding-bottom:8em;
+    padding-bottom:4em;
 }
 
 /* main navigation */
-#menuIcon {
-    text-align: right;
-    padding: 0 15px 10px;
-}
-#mainMenu {
-    position: absolute;
-    bottom: 40px;
-    background-color: #2fa1e0;
-    width: 100%;
-}
 #mainMenu a{
     color:white;
     text-decoration: none;
@@ -161,8 +150,16 @@ main article:first-child {
 #mainMenu a:hover {
     background-color:#0a193b;
 }
-#mainMenu li:nth-child(1){
+#mainMenu li {
+    width:50%;
+    float:left;
+    list-style-type: none;
+}
+#mainMenu ul {
     border-top:solid 1px white;
+}
+#mainMenu li:nth-of-type(odd) a {
+    border-right:solid 1px white;
 }
 /* end main navigation */
 /* footer rules */
@@ -171,13 +168,17 @@ footer {
     background-image:linear-gradient(#243a6c, #2fa1e0);
     position: relative;
     text-align: center;
-    height: 40px;
 }
-
-footer figure {
-    display: none;
+footer figure img {
+    position: absolute;
+    top:-2.5em;
+    left:0;
 }
-
+footer figcaption {
+    position: absolute;
+    top:-1.1em;
+    left:9.5em;
+}
 #copyright {
     padding: 1.5em 0 .5em 0;
     color:white;
@@ -220,6 +221,14 @@ a.button-more:after {
     content:" \2192";
 }
 
+/*
+**************** new rules for Friday **********************
+*/
+
+/* a few small screen rules we didn't have time to add. */
+h3 { 
+    padding-top: 1em;
+}
 a.button-more { /* sometimes the arrow on the button-more drops to the next line to prevent this from happening add the following to our existing rule, now the link words and our arrow will stay together no matter what. */
     white-space: nowrap;
 }
@@ -272,31 +281,12 @@ a.button-more { /* sometimes the arrow on the button-more drops to the next line
         border-right:solid 1px #ccc; /* add seperator lines between the columns */
         border-left:solid 1px #ccc;
     }
-    
-    footer figure {
-        display: block;
-    }
-    
-    footer figure img {
-        position: absolute;
-        top:-2.5em;
-        left:0;
-    }
-    footer figcaption {
-        position: absolute;
-        top:-1.1em;
-        left:9.5em;
+    .top {
+        display: none;
     }
     
 }
 
-/* Other things you guys can do on this file: 
-
-    1. make 'button-large' center align within their respective articles, add more margin to the top, they are still too tight to the other content
-    2. Create a mid screen view - have class work out together how layout should change with mid screen view, create an additional media query where the layout breaks. 
-    3. there are other small tweaks you guys can work on to improve the layout, have them adjust the file where necessary
-
-*/
 
 
 
