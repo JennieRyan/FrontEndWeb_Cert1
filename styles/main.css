@@ -1,177 +1,169 @@
-/*      Colors used:
-        dark blue: #00285c;
-        light blue: #016a99;
-        dark orange: #7b441c
-        teal: #17605f
+/*
+ colors used:
+     dark blue: 00285c
+     mid blue: 016a99
+     dark orange: 7b441c
+     teal: 17605f
 */
-
 * {
-    padding: 0;
-    margin: 0;
+    padding:0;
+    margin:0;
 }
-
-#container {
-    width: 960px;
-    margin: 0 auto;
-    background-color: #fff;
-}
-
 body {
-    font-family: arial, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #00285c;
 }
-
-p {
-    margin-bottom: 20px;
-}
-
 h1 {
-    color: #fff;
-    background-color: #016a99;
-    padding: 2px 5px;
-    margin: 12px 0 24px;
+    background-color:#016a99;
+    color:#fff;
+    padding:2px 5px;
+    margin:12px 0 24px;
 }
-
 h3 {
-    color: #17605f;
-    border-bottom: dashed 2px #17605f;
-    margin-bottom: 12px
+    color:#17605f;
+    border-bottom:dashed 2px #17605f;
+    margin-bottom:12px;
 }
-
 h4 {
     background-color: #00285c;
-    color: #fff;
-    padding: 4px 20px;
+    color:#fff;
+    padding:4px 20px;
     text-align: center;
 }
-ul {
-    margin: 4px 20px 4px 40px;
+p {
+    margin-bottom:12px;
 }
-
-/* menu styles */
-
-a {
-    color: #016a99;
+a{
+    color:#016a99;
 }
-
 a:visited {
-    color: #00285c;
+    color:#00285c;
 }
-
 a:hover {
-    color: #7b441c;
+    color:#7b441c;
+}
+ul {
+    margin:6px 20px 6px 40px;
+}
+#container {
+    width:960px;
+    margin:0 auto;
+    background-color:#fff;
 }
 
-/* MAIN MENU STYLE STARTS HERE */
-
+/*  main menu starts here */
 #mainMenu {
     background-color: #016a99;
     list-style-type: none;
     text-align: center;
-    margin: 0;
+    margin:0;
 }
 
 #mainMenu li {
     display: inline-block;
-    margin: 0 10px 5px 10px;
-    }
-
-#mainMenu a {
-    padding: 10px 20px;
-    text-decoration: none;
-    border: solid 2px #fff;
+    margin:0 10px 10px;
+}
+#mainMenu a:link {
+    color:#fff;
+    padding:10px 20px;
     display: block;
-    color: #fff;
+    border:solid 2px #fff;
+    text-decoration: none;
 }
-
 #mainMenu a:visited {
-    color: #ccc;
+    color:#ccc;
 }
-
 #mainMenu a:hover {
     background-color: #fff;
-    color: #00285c;
-    border-color: #00285c;
+    color:#016a99;
+    border-color:#00285c;
 }
-
 #mainMenu a:active {
-    background-color: #00285c;
-    color: #fff;
+    background-color:#00285c;
+    color:#fff;
 }
-
-/* below is an ID to fake a page navigation not being active which overwrites all stylings previously stated when applied*/
-
 #mainMenu a#onPage {
-    background-color: #ccc;
-    color: #016a99;
-    border-color: #ccc;
+    background-color:#ccc;
+    color:#016a99;
+    border-color:#ccc;
     cursor: default;
 }
-
-/* END MENU STYLES */
+/* mainMenu ends */
 
 #mainSection {
-    margin: 10px;
+    margin:10px;
 }
-
 #mainSection img {
-    padding: 20px;
-    border: solid 2px #333;
-    margin-bottom: 5px;
+    padding:20px;
+    border:solid 2px #999;
+    margin-bottom:10px;
 }
 
-.article3 {
-    width: 300px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+.onLeft {
     float: left;
+    margin-right:12px;
 }
-
-.article3:last-child {
-    margin-right: 0;
+.onRight {
+    float:right;
+    margin-left:12px;
 }
-
-.article3 h2 {
-    text-align: center;
-    margin-bottom: 12px;
+.callOut {
+    border:solid 2px #999;
+    background-color:#ccc;
+    padding:20px;
 }
-
-.onLeft  {
-    float: left;
-    margin-right: 12px;
-    margin-bottom: 10px;
+.callOut li {
+    margin-bottom:4px;
 }
-
-.onRight  {
-    float: right;
-    margin-left: 12px;
-}
-
 .caption {
     font-style: italic;
-    color: #999;
+    color:#999;
     text-align: center;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom:12px;
 }
-
-.clearit {
+.clearIt {
     clear: both;
 }
-
-.callout {
-    padding: 20px;
-    border: solid 2px #999;
-    background-color: #ccc;
+.article3 {
+    width:300px;
+    margin-right:20px;
+    margin-bottom:20px;
+    float:left;
+}
+.article3:last-child {
+    margin-right:0;
+}
+.article3 h2 {
+    text-align: center;
+    margin-bottom:12px;
 }
 
-.callout li {
-    margin-bottom: 4px;
+.colA {
+    width: 25%;
+    float: left;
+    border: dashed 2px #016a99;
+    padding: 5px 10px 0 10px;
+    margin: 0 20px 10px 0;
+}
+
+.colB {
+    padding: 5px 0 10px 10px;
+}
+
+.spaceRT {
+    margin-right: 20px;
 }
 
 #footer {
+    background-color:#016a99;
+    color:#fff;
     text-align: center;
-    background-color: #016a99;
-    color: #fff;
-    padding: 10px;
+    padding:10px;
 }
+
+
+
+
+
+
