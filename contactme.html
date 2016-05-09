@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Form with PHP</title>
+</head>
+    
+<body>
+    
+  <h1>Get in touch with me</h1>
+  <form method="post" action="form-parser.php">
+    <ol>
+        <li>
+            <label for="name">Name:</label>
+            <input type="text" name="name" />
+        </li>
+        
+        <li>
+            <label for="email">Email:</label>
+            <input type="email" name="email" />
+        </li>
+        
+        <li>
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" />
+        </li>
+        
+        <li>
+            <label for="comments">Comments:</label>
+            <textarea type="text" name="comments"></textarea>
+        </li>
+        
+        <li>
+            <label for="human">What is 3+1?</label>
+            <input type="text" name="human" />
+        </li>
+        
+        <input name="submit" type="submit" value="submit" />
+    
+    </ol>
+  </form>
+    
+</body>
+</html>
