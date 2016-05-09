@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8" />
+        <title>CSS3 Ease Information</title>
+        
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
+        <style rel="stylesheet">
+
+            div {
+                width: 100px;
+                height: 100px;
+                background: red;
+                -webkit-transition: width 2s; /*Safari*/
+                transition: width 2s;
+            }
+            
+            #div1 {
+                transition-timing-function: linear;
+            }
+             #div2 {
+                transition-timing-function: ease;
+            }           
+             #div3 {
+                transition-timing-function: ease-in;
+            }           
+            #div4 {
+                transition-timing-function: ease-out;
+            }
+            #div5 {
+                transition-timing-function: ease-in-out;
+            }            
+            
+            div:hover {
+                width: 300px;
+            }
+        </style>
+        
+
+    </head>
+    
+    <body>
+        <header>
+        
+        </header>
+        <section>
+            <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+                <p><div id="div1">linear</div></p>
+                <p><div id="div2">ease</div> </p>
+                <p><div id="div3">ease-in</div>  </p>      
+                <p><div id="div4">ease-out</div>   </p>        
+                <p><div id="div5">ease-in-out</div>    </p>       
+            <p>Hover over the div elements above to see the different speed curves.</p>      
+        </section>
+        <footer>
+        
+        </footer>
+    
+    </body>
+    
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8" />
+        <title>Transform Origin Using CSS3</title>
+        
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
+        <style rel="stylesheet">
+            .box-1 {
+                transform: rotate(15deg);
+                transform-origin: 0 0;
+            }
+            .box-2 {
+                transform: scale(.5);
+                transform-origin: 100% 100%;
+            }
+            .box-3 {
+                transform: skewX(20deg);
+                transform-origin: top left;
+            }
+            .box-4 {
+                transform: scale(.75) translate(-10px, -10px);
+                transform-origin: 20px 50px;
+            }
+        </style>
+        
+
+    </head>
+    
+    <body>
+        <header>
+        
+        </header>
+        <section>
+                <figure class="box-1">Box 1</figure>
+                <figure class="box-2">Box 2</figure>
+                <figure class="box-3">Box 3</figure>               
+                <figure class="box-4">Box 4</figure>                
+        </section>
+        <footer>
+        
+        </footer>
+    
+    </body>
+    
+</html>

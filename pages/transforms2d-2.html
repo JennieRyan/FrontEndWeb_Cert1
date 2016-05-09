@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8" />
+        <title>CSS 2D transformations</title>
+        
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
+        
+        <style rel="stylesheet">
+            img.translate:active {
+                transform: translate(100px, 100px);
+            }
+             img.translateY:active {
+                transform: translateY(-50px);
+            }
+            img.rotate:active {
+                transform: rotate(200deg);
+            }
+            img.size:active {
+                transform: scale(.5,.5);
+            }
+            img.skew:active {
+                transform: skewX(-45deg);
+            }
+            .box {
+                width:100px;
+                height:100px;
+                background-color:#fcb722;
+                margin:5px;
+                display: inline-block;
+                animation: shimmy 2s infinite;
+                animation-direction: alternate;
+                transform:skew(20deg);
+                
+            }
+            @keyframes shimmy {
+                0% {
+                    transform:skewY(20deg);
+                }
+                100% {
+                    transform:skewY(-20deg);
+                }
+            }
+           
+            
+        </style>
+    </head>
+    
+    <body>
+        <section>
+            <img src="../images/spots.png" alt="spotted circle" class="translate" />
+            <img src="../images/spots.png" alt="spotted circle" class="translateY" />
+            <img src="../images/spots.png" alt="spotted circle" class="rotate" />
+            <img src="../images/spots.png" alt="spotted circle" class="size" />
+            <img src="../images/spots.png" alt="spotted circle" class="skew" />
+            
+            <div class="box"></div>
+            <div class="box"></div>
+
+        </section>
+    </body>
+    
+</html>

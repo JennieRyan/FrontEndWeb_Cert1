@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8" />
+        <title>CSS 2D transformations</title>
+        
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
+        
+        <style rel="stylesheet">
+            img:active {
+                cursor: pointer;
+            }
+            img.translate:active {
+                transform: translate(100px, 100px);
+            }
+            img.translateY:active {
+                transform:translateY(-50px);
+            }
+            img.rotate:active {
+                transform:rotate(200deg);
+            }
+            img.size:active {
+                transform:scale(.5,.8);
+            }
+            img.skew:active {
+                transform:skewY(45deg);
+            }
+        
+        </style>
+    </head>
+    
+    <body>
+        <section>
+            <img src="../images/spots.png" alt="spotted circle" class="translate" />
+            <img src="../images/spots.png" alt="spotted circle" class="translateY" />
+            <img src="../images/spots.png" alt="spotted circle" class="rotate" />
+            <img src="../images/spots.png" alt="spotted circle" class="size" />
+            <img src="../images/spots.png" alt="spotted circle" class="skew" />
+        </section>
+    </body>
+    
+</html>

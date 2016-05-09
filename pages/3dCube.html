@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8" />
+        <title>2D Cube Using CSS3</title>
+        
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
+        <style rel="stylesheet">
+            .cube-container {
+                height: 200px;
+                perspective: 300px;
+                position: relative;
+                width: 200px;
+            }
+            .cube {
+                height: 100%;
+                position: absolute;
+                transform: translateZ(-100px);
+                transform-style: preserve-3d;
+                width: 100%;
+            }
+            .side {
+                background: rgba(45, 179, 74, .3);
+                border: 2px solid #2db34a;
+                height: 196px;
+                position: absolute;
+                width: 196px;
+            }
+            .front {
+                transform: translateZ(100px);
+            }
+            .back {
+                transform: rotateX(180deg) translateZ(100px);
+            }
+            .left {
+                transform: rotateY(-90deg) translateZ(100px);
+            }
+            .right {
+                transform: rotateX(-90deg) translateZ(100px);
+            }
+            .top {
+                transform: rotateX(90deg) translateZ(100px);
+            }
+            .bottom {
+                transform: rotateX(-90deg) translateZ(100px);
+            }
+        </style>
+        
+
+    </head>
+    
+    <body>
+        <header>
+        
+        </header>
+        <section>
+            <div class="cube-container">
+               <div class="cube">
+                <figure class="side front">1</figure>
+                <figure class="side back">2</figure>
+                <figure class="side left">3</figure>
+                <figure class="side right">4</figure>
+                <figure class="side top">5</figure>
+                <figure class="side bottom">6</figure>                            
+                </div>
+            </div>
+        </section>
+        <footer>
+        
+        </footer>
+    
+    </body>
+    
+</html>

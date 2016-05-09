@@ -1,103 +1,87 @@
 <!doctype html>
 
-
 <html lang="en">
     
-<head>
-    <meta charset="utf-8" />
-    <title>CSS button animation</title>
+    <head>
+        <meta charset="utf-8" />
+        <title>CSS button animation</title>
+        
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
+        
+        <style rel="stylesheet">
+            a {
+                margin:1em;
+                text-decoration: none;
+                padding:.5em;
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
+            a.color {
+                background-color:#fcb722;
+                color:#fff;
+                padding:.4em 1em;
+                border-radius:6px;
+                -webkit-transition-property: background;
+                -webkit-transition-duration: .5s;
+                transition-property: background;
+                transition-duration: .5s;
+            }
+            a.color:hover {
+                background-color:#22b1fc;
+            }
+            a.size {
+                background-color:#666;
+                color:#fff;
+                padding:.5em 1em;
+                height:2em;  
+                transition-property: height;
+                transition-duration: 1s;
+                transition-delay: .4s;
+            }
+            a.size:hover {
+                height:4em;
+            }
+            a.position {
+                height:3em;
+                width:9em;
+                background-color:#69c;
+                color:#333; 
+                position:relative;
+                left:0;
+                transition-property: left;
+                transition-duration: 2s;
+            }
+            a.position:hover {
+                left:4em;
+            }
+            a.allChange {
+                background-color:#22b1fc;
+                border:solid 3px navy;
+                border-radius:10px;
+                box-shadow:3px 3px 5px #666;
+                color:#fff;
+                transition: all 2s .25s
+            }
+            a.allChange:hover {
+                background-color:#fcb722;
+                border:solid 6px orange;
+                border-radius:5px;
+                box-shadow:6px 6px 10px #ccc;
+                color:#333;
+            }
+        
+        </style>
+    </head>
     
-    <!--[if lt IE 9]>
-        <script src="js/html5shiv.min.js"></script>
-    <![endif]-->
+    <body>
+        <section>
+            <p><a href="#" class="color">I am a link that changes color!</a></p>
+            <p><a href="#" class="size">I am a link that changes size!</a></p> <p><a href="#" class="position">I am a link that changes position!</a></p>
+            <p><a href="#" class="allChange">I am a link that changes!</a></p>
+        </section>
+    </body>
     
-    <style rel=stylesheet>
-        
-        a {
-            display: block;
-            margin: 1em;
-            text-decoration: none;
-            padding: .5em;
-            text-align: center;
-            display: table-cell;
-            vertical-align: middle;
-        }
-        
-        
-        a.color {
-            background-color: #fcb722;
-            color: #fff;
-            padding: .4em 1em;
-            border-radius: 6px;
-            transition-property: background;
-            transition-duration: .8s;
-        }
-        a.color:hover {
-            background-color: #22b1fc;
-        }
-        
-        
-        a.size {
-            background-color: #666;
-            color: #fff;
-            padding: .5em 1em;
-            height: 2em;
-            transition-property: height;
-            transition-duration: 1s;
-            transition-delay: .5s;
-        }
-        a.size:hover {
-            height: 4em;
-        }
-        
-        a.position {
-            height: 3em;
-            width: 9em;
-            background-color: #69c;
-            color: #333;
-            position: relative;
-            left: 0;
-            transition-property: left;
-            transition-duration: 2s;
-        }
-                a.position:hover {
-            left: 4em;
-        }
-        
-        a.allChange {
-            background-color: #22b1fc;
-            border: solid 3px navy;
-            border-radius: 10px;
-            box-shadow: 3px 3px 5px #666;
-            color: #fff;
-            transition: all 2s .25s;
-        }
-        
-        a.allChange:hover {
-            background-color: #fcb722;
-            border: solid 6px orange;
-            border-radius: 5px;
-            box-shadow: 6px 6px 10px #ccc;
-            color: #333;
-        }
-    </style>
-
-</head>
-    
-<body>
-    <header>  
-    <section>
-        <p><a href="#" class="color">I am a link that changes color!</a></p>
-        <p><a href="#" class="size">I am a link that changes size!</a></p>
-        <p><a href="#" class="position">I am a link that changes position!</a></p>
-        <p><a href="#" class="allChange">I am a link that changes!</a></p>
-
-    </section>    
-    </header>
-    
-    
-    <footer>
-        
-    </footer>
-</body>
 </html>

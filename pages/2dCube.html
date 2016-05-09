@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8" />
+        <title>2D Cube Using CSS3</title>
+        
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
+        <style rel="stylesheet">
+            .cube {
+                position: relative;
+            }
+            .side {
+                height: 95px;
+                position: absolute;
+                width: 95px;
+            }
+            .top {
+                background: #9acc53;
+                transform: rotate(-45deg) skew(15deg, 15deg)
+            }
+            .left {
+                background: #aec63f;
+                transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%)
+            }
+            .right {
+                background: #80b239;
+                transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%, 100%)
+            }
+        </style>
+        
+
+    </head>
+    
+    <body>
+        <header>
+        
+        </header>
+        <section>
+            <div class="cube">
+                <figure class="side top">1</figure>
+                <figure class="side left">2</figure>
+                <figure class="side right">3</figure>
+            </div>
+        </section>
+        <footer>
+        
+        </footer>
+    
+    </body>
+    
+</html>
