@@ -1,4 +1,12 @@
-
+/*
+    colors:
+        light blue: #dceef8
+        medium blue: #2fa1e0
+        dark blue: #243a6c  
+        dark navy blue: #0a193b
+        regular links: #196a96
+        hover links: #107571
+*/
 /*embedded fonts  */
 @font-face {
     font-family: 'cabinbold';
@@ -9,7 +17,11 @@
          url('../fonts/cabin-bold-webfont.ttf') format('truetype'),
          url('../fonts/cabin-bold-webfont.svg#cabinbold') format('svg');
     font-weight: normal;
-    font-style: normal;}
+    font-style: normal;
+
+}
+
+
 @font-face {
     font-family: 'cabinitalic';
     src: url('../fonts/cabin-italic-webfont.eot');
@@ -19,7 +31,13 @@
          url('../fonts/cabin-italic-webfont.ttf') format('truetype'),
          url('../fonts/cabin-italic-webfont.svg#cabinitalic') format('svg');
     font-weight: normal;
-    font-style: normal;}
+    font-style: normal;
+
+}
+
+
+
+
 @font-face {
     font-family: 'cabinregular';
     src: url('../fonts/cabin-regular-webfont.eot');
@@ -29,7 +47,11 @@
          url('../fonts/cabin-regular-webfont.ttf') format('truetype'),
          url('../fonts/cabin-regular-webfont.svg#cabinregular') format('svg');
     font-weight: normal;
-    font-style: normal;}
+    font-style: normal;
+
+}
+
+
 @font-face {
     font-family: 'fengardo_neueblack';
     src: url('../fonts/fengardoneue_black-webfont.eot');
@@ -39,41 +61,26 @@
          url('../fonts/fengardoneue_black-webfont.ttf') format('truetype'),
          url('../fonts/fengardoneue_black-webfont.svg#fengardo_neueblack') format('svg');
     font-weight: normal;
-    font-style: normal;}
-/*end embedded fonts  */
+    font-style: normal;
 
-/*
-    colors:
-        light blue: #dceef8
-        medium blue: #2fa1e0
-        dark blue: #243a6c  
-        dark navy: #0a193b
-        regular links: #196a96
-        hover links turquoise: #107571
-
-*/
-header, nav, section, aside, article, footer, video, audio, main {      display: block;
 }
 
+header, nav, section, aside, article, footer, video, audio, main {      display: block;
+}
 * {
     padding:0;
     margin:0;
 }
-
-/* HTML elements */
-
 body {
     font-family:'cabinregular',sans-serif;
     background-color:#2fa1e0;
     background-image: linear-gradient(#2fa1e0, white);
 }
-
 header {
     background-color:#243a6c;
     background-image:linear-gradient(#2fa1e0, #243a6c 80%);
     color:white;
 }
-
 h1 {
     font-family:'fengardo_neueblack', sans-serif;
     font-size:3.75em; /* 60px */
@@ -82,148 +89,214 @@ h1 {
     letter-spacing: 2px;
     text-align: center;
 }
-
 h2 {
-    font-size: 2.5em;
-    color: #243a6c;
+    font-size:2.5em;
+    color:#243a6c;
     text-align: center;
-    border-bottom: dotted 2px #243a6c;
-    margin: 0 0 .4em;
-    padding: .4em 0 0;
+    border-bottom:dotted 2px #243a6c;
+    margin:0 0 .4em;
+    padding:.4em 0 0;
 }
-
+h3 {
+    padding-top: 1em;
+}
 a {
-    color: #196a96;
+    color:#196a96;
 }
-
 a:visited {
-    color: #0a193b;
+    color:#0a193b;
 }
-
 a:hover {
-    color: #107571;
+    color:#107571;
 }
-
-main {
-    background-color: white;
+main{
+    background-color:white;
 }
-
 img {
     max-width: 100%;
-    height: auto;
+    height:auto;
 }
 
 figcaption {
-    font-size: .7em;
+    font-size:.7em;
     font-style: italic;
-    font-family: Georgia, serif;
+    font-family:Georgia, serif;
     text-align: center;
 }
-
 article {
-    margin: 1em .6em;
+    margin:1em .6em;
 }
-
 main article:first-child {
-    margin-top: 0;
+    margin-top:0;
 }
 #article-secondary {
-    background-color: #dceef8;
-    margin: 0;
-    padding: 0 .6em;
+    background-color:#dceef8;
+    margin:0;
+    padding:0 .6em;
 }
-
 #article-tertiary {
-    margin-bottom: 0;
-    padding-bottom: 4em;
+    margin-bottom:0;
+    padding-bottom:4em;
 }
-/* end HTML elements */
 
-/* Main Navigation */
-
-#mainMenu a {
-    color: white;
+/* main navigation */
+#mainMenu a{
+    color:white;
     text-decoration: none;
     display: block;
-    padding: .2em .6em;
-    border-bottom: solid 1px white;    
+    padding:.2em .6em;
+    border-bottom:solid 1px white; 
 }
-
 #mainMenu a:hover {
-    background-color: #0a193b;
+    background-color:#0a193b;
 }
-
-#mainMenu li:nth-child(1) {
-    border-top: solid 1px white;
+#mainMenu li:nth-child(1){
+    border-top:solid 1px white;
 }
-
-/* End Main Navigation */
-
+/* end main navigation */
+/* footer rules */
 footer {
     background-color:#243a6c;
-    background-image:linear-gradient(#243a6c, #2fa1e0 80%);
+    background-image:linear-gradient(#243a6c, #2fa1e0);
     position: relative;
     text-align: center;
 }
-
 footer figure img {
     position: absolute;
-    top: -2.5em;
-    left: 0;
+    top:-2.5em;
+    left:0;
 }
-
 footer figcaption {
     position: absolute;
-    top: -1.1em;
-    left: 9.5em;
+    top:-1.1em;
+    left:9.5em;
 }
-
 #copyright {
     padding: 1.5em 0 .5em 0;
-    color: white;
-    font-size: .7em;
+    color:white;
+    font-size:.7em;
 }
+
+
 /* general classes */
-
 .onRight {
-    float: right;
-    margin-left: .2em;
+    float:right;
+    margin-left:.2em;
 }
-
 .onLeft {
-    float: left;
-    margin-right: .2em;
+    float:left;
+    margin-right:.2em;
 }
-
 .clearIt {
-    clear: both;
+    clear:both;
 }
-
 .halfSize {
-    max-width: 50%;
+    max-width:50%;
 }
-
 a.button-large {
-    color: #fff;
-    background-color: #243a6c;
+    color:white;
+    background-color:#243a6c;
     text-decoration: none;
-    padding: .5em .2em;
+    padding:.5em .2em;
     border-radius: .25em;
-    box-shadow: 3px 3px 6px #333;
+    box-shadow:3px 3px 6px #333;
     display: inline-block;
-    margin-top: .2em;
+    margin:.6em 0;
 }
-
 a:hover.button-large {
-    background-color: #107571;
+    background-color:#107571;
 }
-
 a.button-more {
     text-decoration: none;
 }
-
 a.button-more:after {
-    content: " \2192";
+    content:" \2192";
 }
 
-/* end general classes */
+/*
+**************** new rules for Friday **********************
+*/
+
+/* a few small screen rules we didn't have time to add. */
+h3 { 
+    padding-top: 1em;
+}
+a.button-more { /* sometimes the arrow on the button-more drops to the next line to prevent this from happening add the following to our existing rule, now the link words and our arrow will stay together no matter what. */
+    white-space: nowrap;
+}
+.center {
+        text-align: center;
+    }
+.top {
+    position: absolute;
+    top:-1.1em;
+    right:15px;
+    font-style: bold;
+    font-size: .9em;
+}
+.top a {
+    text-decoration: none;
+}
+
+/* for larger screens */
+@media screen and (min-width:670px) { /* MEDIA QUERIES */
+    body {
+        max-width: 1000px; /* set a maximum width for the page */
+        margin: 0 auto; /* horizontally center it as  a block */
+    }
+    h2 {
+        font-size: 1.75em; /* adjust h2 size */
+    }
+    #mainMenu {
+        text-align: center; 
+    }
+    #mainMenu li { /* make menu items appear on one line and center them on page */
+        display:inline-block;
+        border:none;
+        width:24%;
+        text-align:center;
+    }
+    #mainMenu li a, #mainMenu li:nth-child(1) { /* remove menu borders - from small screen rules*/
+        border:none;
+    }
+
+    article {margin:0;} /* zero out all margin settings from small screen rules */
+    #article-primary, #article-secondary, #article-tertiary { /* style all articles to appear side-by-sideand to */
+        float:right;
+        width:33.2%; /* fill available space, have to be less than 33.3% to accomdate for border on middle article (next rule), show this first with teh following rule and then change to next rule to make some space on right and left */
+        width:29.2%; /* subtract 2% from each column and add that 2% onto the right and left padding (next rule) to create spacing between columns. */
+        padding: 0 2% 1em; /* the 2% is to create the spacing between the columns and the 1em bottom is to make it so it doesn't crash into footer */
+    }
+    
+    #article-secondary {
+        background-color:white; /* make middle column have white background */
+        border-right:solid 1px #ccc; /* add seperator lines between the columns */
+        border-left:solid 1px #ccc;
+    }
+    .top {
+        display: none;
+    }
+    
+}
+
+/* Other things you guys can do on this file: 
+
+    1. make 'button-large' center align within their respective articles, add more margin to the top, they are still too tight to the other content
+    2. Create a mid screen view - have class work out together how layout should change with mid screen view, create an additional media query where the layout breaks. 
+    3. there are other small tweaks you guys can work on to improve the layout, have them adjust the file where necessary
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
