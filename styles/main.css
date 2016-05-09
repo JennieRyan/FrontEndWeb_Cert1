@@ -45,7 +45,6 @@ h1 {
     background-color: #243a6c;
     font-weight: normal;
     font-style: italic;
-    margin-top: 135px;    /*to push it down below header*/
 }
 
 ul, ol, p {
@@ -54,10 +53,7 @@ ul, ol, p {
 
 header {
     background-color: #243a6c;
-    /*position: relative; to address the turtle image positioning and allow it to be positioned relative to header*/
-    position: fixed; /* makes header stay fixed on page regardless of scrolling*/
-    top: 0;
-    z-index: 5;
+    position: relative; /* to address the turtle image positioning and allow it to be positioned relative to header*/
 }
 
 #turtlePic {
@@ -102,7 +98,7 @@ to show hidden drop down when main navigation is hovered -- ANY LI that's hovere
 
 #mainNavigation ul li {
     position: relative;
-    z-index: 10; /*so that the drop down menu doesn't disappear behind the video on this page*/
+    z-index: 5; /*so that the drop down menu doesn't disappear behind the video on this page*/
 } /*hooks (lines up) sub menus to the parent list items*/
 
 #mainNavigation ul:after {
@@ -177,20 +173,4 @@ video {
     border: solid 3px #fff;
     float: left;
     margin: 15px;
-}
-
-#saveTurtle {
-    background-color: #243a6c;
-    border-radius: 10px 0 0 10px; /*makes top and bottom left rounded -- top and bottom right square*/
-    border: solid 3px #fff;
-    padding: 10px;
-    color: #fff;
-    width: 150px;
-    position: fixed; /*similar to absolute -- however stays at same location on page window regardless of scrolling.  If we had wanted it based on the container or main -- we would have to give that parent element a position of relative*/
-    top: 25%;
-    right: -5px;
-}
-
-#saveTurtle a {
-    color: #fff;
 }
